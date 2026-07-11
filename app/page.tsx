@@ -29,40 +29,32 @@ export default function Home() {
     return () => clearInterval(timer);
   }, [heroGraphics.length]);
 
-  const corporateStats = [
-    { value: "50+", label: "Web Applications Deployed" },
-    { value: "99.9%", label: "Uptime Architecture Rating" },
-    { value: "15+", label: "Engineers & Designers" },
-    { value: "100%", label: "Client Project Satisfaction" },
-    { value: "24/7", label: "Remote System Monitoring" },
-  ];
-
   const challenges = [
-    { title: "Bridging the Modern UI Skill Gap", desc: "Clunky legacy codebases turn away active users. We develop cutting-edge fluid user interfaces built for high retention and seamless client engagement layouts." },
-    { title: "Eliminating Brittle Infrastructure", desc: "Monolithic software systems fail during high seasonal consumer traffic. Our serverless architecture models offer horizontal modular scaling parameters." },
-    { title: "Enforcing Ironclad Web Security", desc: "Web vulnerabilities jeopardize critical transactional pipelines. We build frameworks explicitly aligned to prevent the top OWASP security risks." }
+    { title: "Fixing Outdated Layouts", desc: "Clunky legacy websites turn away users. We build clean, responsive user interfaces designed to look good on modern devices and provide smooth navigation." },
+    { title: "Handling Traffic Spikes", desc: "Monolithic software systems fail under heavy traffic. Our serverless Next.js architecture splits pages up so your website stays fast and modular." },
+    { title: "Basic Web Vulnerabilities", desc: "Unprotected contact forms open the door to database spam. We implement standard input validation to block malicious submission data." }
   ];
 
   const engineeringSteps = [
-    { step: "01", title: "Discovery & System Strategy", desc: "We map your operational workflows, target consumer demographics, and product scope parameters collaboratively." },
-    { step: "02", title: "High-Fidelity UI/UX Architecture", desc: "Designing wireframe frameworks that balance performance-focused speed patterns with premium custom aesthetics." },
-    { step: "03", title: "Decoupled Engineering Execution", desc: "Writing modern modular code blueprints using highly scalable tools like Next.js, React, and TypeScript." },
-    { step: "04", title: "Automated Pipeline Validations", desc: "Running deep integration checks, accessibility audits, and security vulnerability parameter mitigation layers." },
-    { step: "05", title: "Continuous Global Cloud Deployment", desc: "Deploying your application on distributed serverless architecture networks for hyper-optimized load speeds." }
+    { step: "01", title: "Project Scoping & Discovery", desc: "We discuss your target audience, core feature goals, and overall design layout styles together before writing any code." },
+    { step: "02", title: "UI/UX & Wireframing", desc: "Sketching out visual layouts that balance quick loading speeds with clean, modern minimalist aesthetics." },
+    { step: "03", title: "Clean Frontend Coding", desc: "Writing tidy, structured, component-driven code using modern frontend tools like Next.js, React, and TypeScript." },
+    { step: "04", title: "Manual Testing & Bug Fixing", desc: "Reviewing layout constraints across mobile screens, ensuring links work properly, and fixing layout bugs." },
+    { step: "05", title: "Vercel Cloud Deployment", desc: "Launching your website onto Vercel's global delivery network so it pulls up instantly for your visitors." }
   ];
 
   const industries = [
-    { title: "E-commerce & Retail", desc: "Blazing fast headless e-commerce checkouts, payment processing matrices, and scalable inventories." },
-    { title: "B2B SaaS Systems", desc: "Robust data multi-tenancy configurations, metric dashboards, and decoupled custom routing controls." },
-    { title: "FinTech & Secure Portals", desc: "Encryption layer parameter management, API validations, and deep ledger data safety architecture." },
-    { title: "EdTech Learning Hubs", desc: "Responsive video processing pipelines, dynamic student profile interfaces, and clean WCAG accessibility guidelines." }
+    { title: "E-commerce & Retail", desc: "Building modular online storefronts with smooth item viewing cards and fast checkout links." },
+    { title: "B2B SaaS Portals", desc: "Clean layout arrangements for customer metric dashboards, side-nav configurations, and simple settings paths." },
+    { title: "Services & Local Business", desc: "Highly professional service portfolios built to look great, build brand authority, and turn visitors into client inquiries." },
+    { title: "Blogs & Content Portals", desc: "Using headless CMS layouts so you can easily type out, update, and publish informational articles dynamically." }
   ];
 
   const techStack = [
-    { category: "Frontend Frameworks", tools: ["Next.js", "React", "TypeScript", "TailwindCSS", "Remix"] },
-    { category: "Backend Systems", tools: ["Node.js", "Python", "Go Language", "GraphQL APIs", "REST Architectures"] },
-    { category: "Database & Storage", tools: ["PostgreSQL", "MongoDB", "Redis Caching", "Prisma ORM", "Supabase"] },
-    { category: "Cloud & Devops", tools: ["AWS Ecosystem", "Vercel Platform", "Docker Containers", "GitHub Pipelines", "TLS Security"] }
+    { category: "Frontend Core", tools: ["Next.js", "React", "TypeScript", "TailwindCSS"] },
+    { category: "Backend & Data APIs", tools: ["Node.js", "REST APIs", "Sanity CMS", "GraphQL"] },
+    { category: "Databases & Storage", tools: ["PostgreSQL", "MongoDB", "Supabase Base Layers"] },
+    { category: "Cloud & Workflows", tools: ["Vercel Hosting", "GitHub Repositories", "Git Pipelines"] }
   ];
 
   return (
@@ -78,7 +70,7 @@ export default function Home() {
               ✨ Next-Gen Web Architecture
             </span>
             <span className="text-[11px] font-extrabold tracking-wider text-[#636B2F] uppercase bg-[#BAC095]/20 border border-[#BAC095]/40 px-3.5 py-1.5 rounded-full">
-              W3C Certified Standards
+              Modern Frontend Frameworks
             </span>
           </div>
           
@@ -94,16 +86,6 @@ export default function Home() {
             <Link className="bg-[#636B2F] hover:bg-[#3D4127] text-white font-extrabold px-8 py-4 rounded-xl transition-all shadow-md flex items-center gap-2 cursor-pointer" href="/contact">
               Get Started Today <span>→</span>
             </Link>
-          </div>
-
-          {/* Metrics Grid Row inside Hero */}
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-4 pt-8 border-t border-[#BAC095]/30">
-            {corporateStats.map((stat, i) => (
-              <div key={i} className="space-y-1" data-aos="fade-up" data-aos-delay={200 + i * 50}>
-                <div className="text-2xl md:text-3xl font-black text-[#636B2F] tracking-tight">{stat.value}</div>
-                <div className="text-[11px] font-bold text-[#3D4127]/60 uppercase tracking-tight leading-tight">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
 
@@ -144,7 +126,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-[#3D4127]">
-              Solving the 3 Biggest Web Development Challenges
+              Solving Practical Web Development Bottlenecks
             </h2>
             <p className="text-[#636B2F] text-sm font-semibold">
               The software landscape has shifted. We engineer robust digital architectures built to eliminate modern roadblocks.
@@ -170,24 +152,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= STANDARDS & COMPLIANCE ================= */}
+      {/* ================= CORE PERFORMANCE & ACCESSIBILITY FUNDAMENTALS ================= */}
       <section className="max-w-7xl mx-auto py-24 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6" data-aos="fade-right">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-[#3D4127]">
-              Our Global Standards & <br />
-              <span className="text-[#636B2F]">Compliance Framework</span>
+              Our Focus on Clean Code & <br />
+              <span className="text-[#636B2F]">Website Optimization</span>
             </h2>
             <p className="text-sm md:text-base text-[#3D4127]/80 font-medium leading-relaxed">
-              We follow rigorous international protocol guidelines to guarantee your user data stays secure, application response configurations execute with peak optimization, and digital interfaces remain accessible globally.
+              We focus on standard development guidelines to ensure your website runs efficiently, handles images smoothly, and remains readable across standard web viewports.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               {[
-                { title: "WCAG Accessibility Compliant", desc: "Every line of client code is audited for inclusive contrast ratios and readable screen parameters." },
-                { title: "OWASP Top 10 Security", desc: "Rigorous protection scripts across form validation modules to prevent malicious injections." },
-                { title: "W3C Semantic Standards", desc: "Clean semantic markup that modern indexing spiders favor for maximum natural SEO rankings." },
-                { title: "GDPR Data Processing", desc: "Implementing cookie compliance handling configurations and secure local token storage patterns." }
+                { title: "Semantic Accessibility Layout", desc: "Structuring text headers and button nodes cleanly so standard screen readers can interpret your layout parameters." },
+                { title: "Safe Input Validations", desc: "Setting up character checks on form input fields to stop bot manipulation and automated submission cycles." },
+                { title: "Semantic HTML Structure", desc: "Utilizing clean standard markup elements that help standard indexing systems crawl page layouts efficiently." },
+                { title: "Standard Storage Safety", desc: "Storing user settings or basic site data configurations inside secure local tokens to keep layout contexts intact." }
               ].map((item, i) => (
                 <div 
                   key={i} 
@@ -205,9 +187,9 @@ export default function Home() {
           {/* Right Visual Stack Panel */}
           <div className="bg-white border border-[#BAC095]/30 p-8 rounded-3xl space-y-4 shadow-sm" data-aos="fade-left" data-aos-delay="150">
             {[
-              { val: "100%", label: "Core Web Vitals Performance Audit Verified", badge: "🟢" },
-              { val: "W3C", label: "Semantic Structuring Validation Standards Applied", badge: "🔵" },
-              { val: "OWASP", label: "Security Risk Mitigation Layer Integrated", badge: "🟣" }
+              { val: "Optimized Delivery", label: "Lazy loading layout assets and compressing image framework parameters automatically.", badge: "🟢" },
+              { val: "Modular Components", label: "Organizing your frontend elements into clean, repeatable React files for future ease of editing.", badge: "🔵" },
+              { val: "Data Sanitization", label: "Cleaning up special character inputs on forms to avoid unwanted layout pipeline text errors.", badge: "🟣" }
             ].map((box, i) => (
               <div 
                 key={i} 
@@ -215,7 +197,7 @@ export default function Home() {
                 data-aos="fade-left"
                 data-aos-delay={200 + i * 100}
               >
-                <span className="text-sm font-black text-[#636B2F] bg-white px-3 py-1.5 rounded-lg border border-[#BAC095]/30 shadow-sm">
+                <span className="text-sm font-black text-[#636B2F] bg-white px-3 py-1.5 rounded-lg border border-[#BAC095]/30 shadow-sm whitespace-nowrap">
                   {box.badge} {box.val}
                 </span>
                 <span className="text-xs font-bold text-[#3D4127]/80">{box.label}</span>
@@ -343,19 +325,19 @@ export default function Home() {
 
       {/* ================= FINAL CTA CONVERSION BANNER ================= */}
       <section 
-        className="max-w-5xl mx-auto my-24 bg-[#636B2F] rounded-3xl p-8 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden"
+        className="max-w-5xl mx-auto mx-4 sm:mx-6 lg:mx-auto my-16 md:my-24 bg-[#636B2F] rounded-3xl p-6 sm:p-10 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden"
         data-aos="zoom-in"
       >
         <div className="absolute inset-0 bg-[radial-gradient(#BAC095_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
         <div className="max-w-2xl mx-auto space-y-4 relative z-10">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight px-2">
             Ready to Elevate Your Codebase Quality?
           </h2>
-          <p className="text-xs md:text-sm text-white/80 font-medium max-w-xl mx-auto leading-relaxed">
+          <p className="text-[13px] sm:text-sm text-white/90 font-medium max-w-xl mx-auto leading-relaxed px-2">
             Partner with SCY Innovation to eliminate technical debt layers, leverage fast headless performance routing, and secure your systems under industry-validated blueprints.
           </p>
           <div className="pt-4">
-            <Link href="/contact" className="bg-[#F4F6F0] text-[#3D4127] hover:bg-white font-black px-8 py-4 rounded-xl transition-all text-xs shadow-lg tracking-wide inline-block cursor-pointer">
+            <Link href="/contact" className="bg-[#F4F6F0] text-[#3D4127] hover:bg-white font-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-all text-xs shadow-lg tracking-wide inline-block cursor-pointer w-full sm:w-auto">
               Start Free Architecture Consultation
             </Link>
           </div>

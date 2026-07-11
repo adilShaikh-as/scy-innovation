@@ -66,13 +66,13 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       {/* ================= HERO SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 pt-24 lg:pt-32 pb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* Left Column */}
-        <div className="space-y-6 max-w-2xl">
+        <div className="space-y-6 max-w-2xl" data-aos="fade-right" data-aos-delay="100">
           <div className="flex flex-wrap gap-2">
             <span className="text-[11px] font-extrabold tracking-wider text-white uppercase bg-[#636B2F] px-3.5 py-1.5 rounded-full shadow-sm">
               ✨ Next-Gen Web Architecture
@@ -99,7 +99,7 @@ export default function Home() {
           {/* Metrics Grid Row inside Hero */}
           <div className="grid grid-cols-3 md:grid-cols-5 gap-4 pt-8 border-t border-[#BAC095]/30">
             {corporateStats.map((stat, i) => (
-              <div key={i} className="space-y-1">
+              <div key={i} className="space-y-1" data-aos="fade-up" data-aos-delay={200 + i * 50}>
                 <div className="text-2xl md:text-3xl font-black text-[#636B2F] tracking-tight">{stat.value}</div>
                 <div className="text-[11px] font-bold text-[#3D4127]/60 uppercase tracking-tight leading-tight">{stat.label}</div>
               </div>
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
 
         {/* Right Column: Free Floating Dynamic Image Stack */}
-        <div className="flex flex-col justify-center items-center w-full relative self-center lg:-mt-6">
+        <div className="flex flex-col justify-center items-center w-full relative self-center lg:-mt-6" data-aos="fade-left" data-aos-delay="200">
           <div className="absolute w-[500px] h-[400px] bg-[#BAC095]/10 rounded-full filter blur-3xl -z-10 right-0 top-0"></div>
           
           {/* Visual Frame */}
@@ -118,8 +118,8 @@ export default function Home() {
                 key={idx}
                 className={`absolute inset-0 transition-all duration-700 ease-in-out transform ${
                   currentGraphic === idx 
-                    ? 'opacity-100 scale-100 pointer-events-auto' 
-                    : 'opacity-0 scale-95 pointer-events-none'
+                    ? 'opacity-100 scale-100 pointer-events-auto z-10' 
+                    : 'opacity-0 scale-95 pointer-events-none z-0'
                 }`}
               >
                 <div className="relative w-full h-full">
@@ -127,7 +127,8 @@ export default function Home() {
                     alt={graphic.alt} 
                     className="object-contain" 
                     fill 
-                    priority={idx === 0}
+                    priority={true}
+                    unoptimized={true}
                     sizes="(max-w-1024px) 100vw, 620px" 
                     src={graphic.src}
                   />
@@ -141,7 +142,7 @@ export default function Home() {
       {/* ================= THE GLOBAL CHALLENGES SECTION ================= */}
       <section className="bg-white border-y border-[#BAC095]/20 py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-[#3D4127]">
               Solving the 3 Biggest Web Development Challenges
             </h2>
@@ -152,7 +153,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {challenges.map((ch, i) => (
-              <div key={i} className="bg-[#F4F6F0]/40 border border-[#BAC095]/30 p-8 rounded-3xl shadow-sm hover:shadow-md transition-all space-y-4">
+              <div 
+                key={i} 
+                className="bg-[#F4F6F0]/40 border border-[#BAC095]/30 p-8 rounded-3xl shadow-sm hover:shadow-md transition-all space-y-4"
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+              >
                 <div className="w-10 h-10 rounded-xl bg-[#BAC095]/20 flex items-center justify-center text-lg">
                   {i === 0 ? '🎨' : i === 1 ? '🧬' : '🛡️'}
                 </div>
@@ -167,7 +173,7 @@ export default function Home() {
       {/* ================= STANDARDS & COMPLIANCE ================= */}
       <section className="max-w-7xl mx-auto py-24 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6" data-aos="fade-right">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-[#3D4127]">
               Our Global Standards & <br />
               <span className="text-[#636B2F]">Compliance Framework</span>
@@ -183,7 +189,12 @@ export default function Home() {
                 { title: "W3C Semantic Standards", desc: "Clean semantic markup that modern indexing spiders favor for maximum natural SEO rankings." },
                 { title: "GDPR Data Processing", desc: "Implementing cookie compliance handling configurations and secure local token storage patterns." }
               ].map((item, i) => (
-                <div key={i} className="p-4 bg-white rounded-xl border border-[#BAC095]/20 space-y-1 shadow-sm">
+                <div 
+                  key={i} 
+                  className="p-4 bg-white rounded-xl border border-[#BAC095]/20 space-y-1 shadow-sm"
+                  data-aos="zoom-in"
+                  data-aos-delay={i * 50}
+                >
                   <h4 className="text-sm font-bold text-[#3D4127]">{item.title}</h4>
                   <p className="text-[11px] text-[#3D4127]/60 font-semibold leading-relaxed">{item.desc}</p>
                 </div>
@@ -192,13 +203,18 @@ export default function Home() {
           </div>
 
           {/* Right Visual Stack Panel */}
-          <div className="bg-white border border-[#BAC095]/30 p-8 rounded-3xl space-y-4 shadow-sm">
+          <div className="bg-white border border-[#BAC095]/30 p-8 rounded-3xl space-y-4 shadow-sm" data-aos="fade-left" data-aos-delay="150">
             {[
               { val: "100%", label: "Core Web Vitals Performance Audit Verified", badge: "🟢" },
               { val: "W3C", label: "Semantic Structuring Validation Standards Applied", badge: "🔵" },
               { val: "OWASP", label: "Security Risk Mitigation Layer Integrated", badge: "🟣" }
             ].map((box, i) => (
-              <div key={i} className="bg-[#F4F6F0]/40 border border-[#BAC095]/20 p-5 rounded-2xl flex items-center gap-4 shadow-sm">
+              <div 
+                key={i} 
+                className="bg-[#F4F6F0]/40 border border-[#BAC095]/20 p-5 rounded-2xl flex items-center gap-4 shadow-sm"
+                data-aos="fade-left"
+                data-aos-delay={200 + i * 100}
+              >
                 <span className="text-sm font-black text-[#636B2F] bg-white px-3 py-1.5 rounded-lg border border-[#BAC095]/30 shadow-sm">
                   {box.badge} {box.val}
                 </span>
@@ -212,7 +228,7 @@ export default function Home() {
       {/* ================= STEP-BY-STEP METHODOLOGY ================= */}
       <section className="bg-white border-y border-[#BAC095]/20 py-24 px-6 text-center space-y-16">
         <div className="max-w-7xl mx-auto">
-          <div className="space-y-3 mb-16">
+          <div className="space-y-3 mb-16" data-aos="fade-up">
             <span className="text-xs font-bold tracking-widest text-[#636B2F] uppercase bg-[#BAC095]/20 px-3 py-1 rounded-full">
               The Development Roadmap
             </span>
@@ -226,7 +242,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto text-left mb-12">
             {engineeringSteps.map((item, i) => (
-              <div key={i} className="bg-[#F4F6F0]/30 border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 relative shadow-sm flex flex-col justify-between">
+              <div 
+                key={i} 
+                className="bg-[#F4F6F0]/30 border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 relative shadow-sm flex flex-col justify-between"
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+              >
                 <div className="space-y-3">
                   <div className="text-3xl font-black text-[#BAC095]/40 font-mono leading-none">{item.step}</div>
                   <h4 className="text-base font-bold text-[#3D4127]">{item.title}</h4>
@@ -240,7 +261,7 @@ export default function Home() {
           </div>
 
           {/* Call to Scale Sub-Banner */}
-          <div className="max-w-4xl mx-auto bg-[#F4F6F0]/60 border border-[#BAC095]/40 rounded-2xl p-4 flex flex-wrap justify-between items-center gap-4 px-6 shadow-sm">
+          <div className="max-w-4xl mx-auto bg-[#F4F6F0]/60 border border-[#BAC095]/40 rounded-2xl p-4 flex flex-wrap justify-between items-center gap-4 px-6 shadow-sm" data-aos="zoom-in">
             <div className="flex items-center gap-3 text-left">
               <span className="text-2xl">🚀</span>
               <div>
@@ -258,7 +279,7 @@ export default function Home() {
       {/* ================= INDUSTRY EXPERTISE ================= */}
       <section className="max-w-7xl mx-auto py-24 px-6">
         <div className="text-center space-y-16">
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-black text-[#3D4127]">Specialized Industry Expertise</h2>
             <p className="text-xs md:text-sm text-[#636B2F] font-semibold max-w-xl mx-auto">
               We design enterprise infrastructure parameters across growth-focused and regulated digital market tracks.
@@ -267,7 +288,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
             {industries.map((ind, i) => (
-              <div key={i} className="bg-white border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 hover:shadow-md transition-all shadow-sm">
+              <div 
+                key={i} 
+                className="bg-white border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 hover:shadow-md transition-all shadow-sm"
+                data-aos="zoom-in"
+                data-aos-delay={i * 100}
+              >
                 <div className="w-10 h-10 rounded-xl bg-[#F4F6F0]/60 border border-[#BAC095]/30 flex items-center justify-center text-lg">
                   {i === 0 ? '🛒' : i === 1 ? '📊' : i === 2 ? '🔒' : '🎓'}
                 </div>
@@ -282,7 +308,7 @@ export default function Home() {
       {/* ================= TECH STACK PANEL ================= */}
       <section className="bg-white border-y border-[#BAC095]/20 py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-[#3D4127]">
               Our Engineering Ecosystem & Technology DNA
             </h2>
@@ -293,7 +319,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {techStack.map((stack, i) => (
-              <div key={i} className="bg-[#F4F6F0]/40 border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 shadow-sm">
+              <div 
+                key={i} 
+                className="bg-[#F4F6F0]/40 border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 shadow-sm"
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+              >
                 <h4 className="text-xs font-black text-[#636B2F] uppercase tracking-wider border-b border-[#BAC095]/20 pb-2">
                   {stack.category}
                 </h4>
@@ -311,7 +342,10 @@ export default function Home() {
       </section>
 
       {/* ================= FINAL CTA CONVERSION BANNER ================= */}
-      <section className="max-w-5xl mx-auto my-24 bg-[#636B2F] rounded-3xl p-8 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden">
+      <section 
+        className="max-w-5xl mx-auto my-24 bg-[#636B2F] rounded-3xl p-8 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden"
+        data-aos="zoom-in"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(#BAC095_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
         <div className="max-w-2xl mx-auto space-y-4 relative z-10">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
@@ -328,7 +362,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= UPDATED COMPLIANT FOOTER COMPONENT ================= */}
+      {/* ================= COMPLIANT FOOTER COMPONENT ================= */}
       <footer className="bg-[#3D4127] text-[#F4F6F0]/80 border-t border-[#BAC095]/20 pt-16 pb-12 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#BAC095]/10">
           
@@ -350,31 +384,11 @@ export default function Home() {
           <div className="md:col-span-3 space-y-3 text-xs">
             <h4 className="font-black text-white uppercase tracking-wider text-[11px]">Core Services</h4>
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link href="/services/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/headless-commerce" className="hover:text-white transition-colors">
-                  E-Commerce & Headless Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mvp-development" className="hover:text-white transition-colors">
-                  MVP Development for Startups
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">
-                  Premium UI/UX & Redesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">
-                  Maintenance & Optimization
-                </Link>
-              </li>
+              <li><Link href="/services/custom-web-development" className="hover:text-white transition-colors">Custom Web App Development</Link></li>
+              <li><Link href="/services/headless-commerce" className="hover:text-white transition-colors">E-Commerce & Headless Commerce</Link></li>
+              <li><Link href="/services/mvp-development" className="hover:text-white transition-colors">MVP Development for Startups</Link></li>
+              <li><Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">Premium UI/UX & Redesign</Link></li>
+              <li><Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">Maintenance & Optimization</Link></li>
             </ul>
           </div>
 
@@ -403,7 +417,9 @@ export default function Home() {
                   (+91) 816-989-6469
                 </a>
               </li>
-              <li><span className="text-[10px] uppercase font-black text-[#BAC095] mt-2 block">💻 Remote Hub Active Worldwide</span></li>
+              <li className="flex items-center gap-1.5 mt-1">
+                <span className="text-[10px] uppercase font-black text-[#BAC095] block">💻 Remote Hub Active Worldwide</span>
+              </li>
             </ul>
           </div>
         </div>

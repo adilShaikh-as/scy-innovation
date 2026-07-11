@@ -184,23 +184,23 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Visual Stack Panel */}
-          <div className="bg-white border border-[#BAC095]/30 p-8 rounded-3xl space-y-4 shadow-sm" data-aos="fade-left" data-aos-delay="150">
+          {/* Right Visual Stack Panel: Updated with Responsive Flex Stacking for Smartphone Viewports */}
+          <div className="bg-white border border-[#BAC095]/30 p-4 sm:p-8 rounded-3xl space-y-4 shadow-sm" data-aos="fade-left" data-aos-delay="150">
             {[
-              { val: "Optimized Delivery", label: "Lazy loading layout assets and compressing image framework parameters automatically.", badge: "🟢" },
+              { val: "Optimization", label: "Lazy loading layout assets and compressing image framework parameters automatically.", badge: "🟢" },
               { val: "Modular Components", label: "Organizing your frontend elements into clean, repeatable React files for future ease of editing.", badge: "🔵" },
               { val: "Data Sanitization", label: "Cleaning up special character inputs on forms to avoid unwanted layout pipeline text errors.", badge: "🟣" }
             ].map((box, i) => (
               <div 
                 key={i} 
-                className="bg-[#F4F6F0]/40 border border-[#BAC095]/20 p-5 rounded-2xl flex items-center gap-4 shadow-sm"
+                className="bg-[#F4F6F0]/40 border border-[#BAC095]/20 p-4 sm:p-5 rounded-2xl flex flex-col items-start sm:flex-row sm:items-center gap-3 sm:gap-4 shadow-sm"
                 data-aos="fade-left"
                 data-aos-delay={200 + i * 100}
               >
-                <span className="text-sm font-black text-[#636B2F] bg-white px-3 py-1.5 rounded-lg border border-[#BAC095]/30 shadow-sm whitespace-nowrap">
+                <span className="text-xs sm:text-sm font-black text-[#636B2F] bg-white px-3 py-1.5 rounded-lg border border-[#BAC095]/30 shadow-sm whitespace-nowrap">
                   {box.badge} {box.val}
                 </span>
-                <span className="text-xs font-bold text-[#3D4127]/80">{box.label}</span>
+                <span className="text-xs font-bold text-[#3D4127]/80 flex-1 leading-relaxed">{box.label}</span>
               </div>
             ))}
           </div>
@@ -323,22 +323,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= FINAL CTA CONVERSION BANNER ================= */}
+      {/* ================= FINAL CTA CONVERSION BANNER: Updated completely to match reference layout image_f75e1b.jpg ================= */}
       <section 
-        className="max-w-5xl mx-auto mx-4 sm:mx-6 lg:mx-auto my-16 md:my-24 bg-[#636B2F] rounded-3xl p-6 sm:p-10 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden"
+        className="max-w-5xl mx-4 sm:mx-6 lg:mx-auto my-16 bg-[#636B2F] rounded-[2.5rem] px-5 py-10 sm:p-12 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden"
         data-aos="zoom-in"
       >
         <div className="absolute inset-0 bg-[radial-gradient(#BAC095_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
-        <div className="max-w-2xl mx-auto space-y-4 relative z-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight px-2">
-            Ready to Elevate Your Codebase Quality?
+        <div className="max-w-2xl mx-auto space-y-5 relative z-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight px-1">
+            Ready to integrate our specialists into your project roadmap?
           </h2>
-          <p className="text-[13px] sm:text-sm text-white/90 font-medium max-w-xl mx-auto leading-relaxed px-2">
-            Partner with SCY Innovation to eliminate technical debt layers, leverage fast headless performance routing, and secure your systems under industry-validated blueprints.
+          <p className="text-[13px] sm:text-sm text-white/90 font-medium max-w-xl mx-auto leading-relaxed px-2 opacity-90">
+            Sync up with our operations desk to review complete wireframe strategies, secure system audits, or custom codebase blueprints tailored exactly to your timeline parameters.
           </p>
-          <div className="pt-4">
-            <Link href="/contact" className="bg-[#F4F6F0] text-[#3D4127] hover:bg-white font-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-all text-xs shadow-lg tracking-wide inline-block cursor-pointer w-full sm:w-auto">
-              Start Free Architecture Consultation
+          <div className="pt-3">
+            <Link href="/contact" className="bg-[#F4F6F0] text-[#3D4127] hover:bg-white font-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-all text-xs sm:text-sm shadow-lg tracking-wide inline-block cursor-pointer w-full sm:w-auto">
+              Consult With Our Tech Leaders Now
             </Link>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import imageUrlBuilder from '@sanity/image-url';
 
-// 1. Updated GROQ Query to fetch author details dynamically
+// GROQ Query to fetch author details dynamically
 const BLOG_POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
   _id,
   title,
@@ -58,12 +58,12 @@ export default function BlogPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       <main className="max-w-7xl mx-auto pt-32 pb-24 px-6">
         
         {/* Header Content Section */}
-        <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
+        <div className="text-center max-w-2xl mx-auto mb-20 space-y-4" data-aos="fade-up">
           <span className="text-xs font-bold tracking-widest text-white uppercase bg-[#636B2F] px-4 py-1.5 rounded-full inline-block shadow-sm">
             Knowledge Desk
           </span>
@@ -77,18 +77,18 @@ export default function BlogPage() {
 
         {/* 2-Column Vertical Card Grid Layout */}
         {loading ? (
-          <div className="text-center py-20">
+          <div className="text-center py-20" data-aos="fade-up">
             <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#636B2F] mx-auto"></div>
             <p className="text-xs font-bold uppercase tracking-wider text-[#3D4127]/50 mt-4">Streaming Insights Log...</p>
           </div>
         ) : articles.length === 0 ? (
-          <div className="text-center py-20 bg-white rounded-3xl border border-[#BAC095]/20 p-8 max-w-xl mx-auto shadow-sm">
+          <div className="text-center py-20 bg-white rounded-3xl border border-[#BAC095]/20 p-8 max-w-xl mx-auto shadow-sm" data-aos="zoom-in">
             <span className="text-3xl block mb-2">📥</span>
             <h3 className="font-bold text-lg text-[#3D4127]">No Articles Published Yet</h3>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {articles.map((post: any) => {
+            {articles.map((post: any, idx: number) => {
               const formattedDate = post.date 
                 ? new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
                 : "Recent Log";
@@ -97,6 +97,8 @@ export default function BlogPage() {
                 <article 
                   key={post._id} 
                   className="bg-white border border-[#BAC095]/30 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-[#636B2F]/30 transition-all duration-300 flex flex-col justify-between group"
+                  data-aos="fade-up"
+                  data-aos-delay={idx * 150}
                 >
                   <div>
                     {/* Top Section: High-Fidelity Thumbnail Header */}
@@ -161,7 +163,7 @@ export default function BlogPage() {
                       {/* CTA Trigger Link */}
                       <Link 
                         href={`/blog/${post.slug}`} 
-                        className="bg-[#F4F6F0] hover:bg-[#636B2F] text-[#3D4127] hover:text-white font-extrabold px-4 py-2.5 rounded-xl text-[11px] uppercase tracking-wider transition-all shadow-sm flex items-center gap-1.5"
+                        className="bg-[#F4F6F0] hover:bg-[#636B2F] text-[#3D4127] hover:text-white font-extrabold px-4 py-2.5 rounded-xl text-[11px] uppercase tracking-wider transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
                       >
                         Read Log <span>→</span>
                       </Link>
@@ -198,31 +200,11 @@ export default function BlogPage() {
           <div className="md:col-span-3 space-y-3 text-xs">
             <h4 className="font-black text-white uppercase tracking-wider text-[11px]">Core Services</h4>
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link href="/services/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/headless-commerce" className="hover:text-white transition-colors">
-                  E-Commerce & Headless Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mvp-development" className="hover:text-white transition-colors">
-                  MVP Development for Startups
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">
-                  Premium UI/UX & Redesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">
-                  Maintenance & Optimization
-                </Link>
-              </li>
+              <li><Link href="/services/custom-web-development" className="hover:text-white transition-colors">Custom Web App Development</Link></li>
+              <li><Link href="/services/headless-commerce" className="hover:text-white transition-colors">E-Commerce & Headless Commerce</Link></li>
+              <li><Link href="/services/mvp-development" className="hover:text-white transition-colors">MVP Development for Startups</Link></li>
+              <li><Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">Premium UI/UX & Redesign</Link></li>
+              <li><Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">Maintenance & Optimization</Link></li>
             </ul>
           </div>
 

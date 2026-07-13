@@ -39,11 +39,11 @@ export default function MVPDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       {/* ================= HERO SECTION ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-24 px-6">
-        <div className="max-w-4xl mx-auto space-y-6 mb-24">
+        <div className="max-w-4xl mx-auto space-y-6 mb-24" data-aos="fade-up">
           <span className="text-xs font-bold uppercase tracking-widest text-white bg-[#636B2F] px-4 py-1.5 rounded-full inline-block shadow-sm">
             Service Domain 03
           </span>
@@ -61,8 +61,8 @@ export default function MVPDevelopment() {
           </div>
         </div>
 
-        {/* ================= CORE CAPABILITIES (White background division block) ================= */}
-        <div className="bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-12 max-w-6xl mx-auto space-y-12 mb-28 shadow-sm">
+        {/* ================= CORE CAPABILITIES ================= */}
+        <div className="bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-12 max-w-6xl mx-auto space-y-12 mb-28 shadow-sm" data-aos="zoom-in">
           <div className="max-w-xl space-y-2">
             <h2 className="text-2xl md:text-3xl font-black tracking-tight">Engineered Structural Capabilities</h2>
             <p className="text-[#636B2F] text-xs font-bold uppercase tracking-wide">The software standards applied across your product line.</p>
@@ -70,7 +70,12 @@ export default function MVPDevelopment() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {capabilities.map((item, i) => (
-              <div key={i} className="bg-[#F4F6F0]/40 border border-[#BAC095]/20 p-6 rounded-2xl space-y-3 transition-colors hover:bg-[#F4F6F0]/10">
+              <div 
+                key={i} 
+                className="bg-[#F4F6F0]/40 border border-[#BAC095]/20 p-6 rounded-2xl space-y-3 transition-colors hover:bg-[#F4F6F0]/10"
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+              >
                 <div className="text-2xl">{item.icon}</div>
                 <h4 className="text-lg font-black tracking-tight">{item.title}</h4>
                 <p className="text-xs md:text-sm text-[#3D4127]/70 font-medium leading-relaxed">{item.desc}</p>
@@ -81,7 +86,7 @@ export default function MVPDevelopment() {
 
         {/* ================= THE STEP-BY-STEP PROCESS ================= */}
         <div className="max-w-6xl mx-auto mb-28 space-y-16">
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-2" data-aos="fade-up">
             <span className="text-xs font-bold tracking-widest text-[#636B2F] uppercase bg-[#D4DE95]/40 px-4 py-1.5 rounded-full inline-block">
               Operational Roadmap
             </span>
@@ -91,7 +96,12 @@ export default function MVPDevelopment() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 text-left">
             {executionSteps.map((step, i) => (
-              <div key={i} className="bg-white border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 relative shadow-sm flex flex-col justify-between">
+              <div 
+                key={i} 
+                className="bg-white border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 relative shadow-sm flex flex-col justify-between"
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+              >
                 <div className="space-y-2">
                   <div className="text-2xl font-mono font-black text-[#BAC095]/50">{step.num}</div>
                   <h4 className="text-sm font-black tracking-tight leading-snug">{step.title}</h4>
@@ -106,7 +116,7 @@ export default function MVPDevelopment() {
         </div>
 
         {/* ================= SPECIALIZED TECHNOLOGY DNA ================= */}
-        <div className="bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-12 max-w-6xl mx-auto space-y-8 mb-28 shadow-sm">
+        <div className="bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-12 max-w-6xl mx-auto space-y-8 mb-28 shadow-sm" data-aos="zoom-in">
           <div className="max-w-xl space-y-1">
             <h2 className="text-2xl md:text-3xl font-black tracking-tight">Our Platform Ecosystem</h2>
             <p className="text-[#636B2F] text-xs font-bold uppercase tracking-wide">The modular stacks we actively configure for high-velocity builds.</p>
@@ -114,7 +124,12 @@ export default function MVPDevelopment() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {subTechs.map((tech, idx) => (
-              <div key={idx} className="bg-[#F4F6F0]/50 border border-[#BAC095]/10 p-5 rounded-xl space-y-2">
+              <div 
+                key={idx} 
+                className="bg-[#F4F6F0]/50 border border-[#BAC095]/10 p-5 rounded-xl space-y-2"
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
+              >
                 <span className="text-[10px] font-black uppercase text-[#636B2F] tracking-wider block border-b border-[#BAC095]/20 pb-1">{tech.title}</span>
                 <p className="text-xs font-bold text-[#3D4127]/90 leading-normal tracking-tight">{tech.tools}</p>
               </div>
@@ -124,7 +139,7 @@ export default function MVPDevelopment() {
 
         {/* ================= SERVICE FAQ ACCORDION ================= */}
         <div className="max-w-4xl mx-auto mb-28 space-y-8">
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-2" data-aos="fade-up">
             <span className="text-xs font-bold tracking-widest text-[#636B2F] uppercase bg-[#D4DE95]/40 px-4 py-1.5 rounded-full inline-block">
               FAQ
             </span>
@@ -134,7 +149,12 @@ export default function MVPDevelopment() {
 
           <div className="space-y-4">
             {serviceFaqs.map((item, index) => (
-              <div key={index} className="bg-white border border-[#BAC095]/30 rounded-2xl shadow-sm overflow-hidden transition-all">
+              <div 
+                key={index} 
+                className="bg-white border border-[#BAC095]/30 rounded-2xl shadow-sm overflow-hidden transition-all"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <button onClick={() => toggleFaq(index)} className="w-full text-left p-5 font-bold text-sm md:text-base text-[#3D4127] flex justify-between items-center bg-white hover:bg-[#F4F6F0]/20 focus:outline-none transition-colors">
                   <span className="flex items-center gap-3">
                     <span className="text-[#636B2F]">ℹ️</span> {item.q}
@@ -155,7 +175,10 @@ export default function MVPDevelopment() {
         </div>
 
         {/* ================= INTUITIVE CONVERSION CONTAINER ================= */}
-        <div className="max-w-5xl mx-auto bg-[#636B2F] rounded-3xl p-8 md:p-12 text-center text-white space-y-4 shadow-xl relative overflow-hidden">
+        <div 
+          className="max-w-5xl mx-auto bg-[#636B2F] rounded-3xl p-8 md:p-12 text-center text-white space-y-4 shadow-xl relative overflow-hidden"
+          data-aos="zoom-in"
+        >
           <div className="absolute inset-0 bg-[radial-gradient(#BAC095_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
           <div className="max-w-xl mx-auto space-y-4 relative z-10">
             <h3 className="text-2xl md:text-3xl font-black">Ready to accelerate your product timeline?</h3>

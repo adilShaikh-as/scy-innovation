@@ -154,13 +154,13 @@ export default function ToolsPage() {
     : toolEcosystem.filter(t => t.category === activeTab);
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       {/* ================= MAIN CONTENT CONTAINER ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
         
         {/* ================= HEADER BLOCK ================= */}
-        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4" data-aos="fade-up">
           <span className="text-xs font-bold tracking-widest text-white uppercase bg-[#636B2F] px-4 py-1.5 rounded-full inline-block shadow-sm">
             ⚙️ Production Infrastructure
           </span>
@@ -172,11 +172,15 @@ export default function ToolsPage() {
           </p>
         </div>
 
-        {/* ================= TWO-COLUMN LAYOUT: SIDEBAR FILTERS & HORIZONTAL TOOLS GRID ================= */}
+        {/* ================= TWO-COLUMN LAYOUT ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 max-w-7xl mx-auto items-start mb-28">
           
           {/* Left Sticky Sidebar Filter Column */}
-          <div className="lg:col-span-3 space-y-2 lg:sticky lg:top-36 bg-white border border-[#BAC095]/30 rounded-2xl p-4 shadow-sm">
+          <div 
+            className="lg:col-span-3 space-y-2 lg:sticky lg:top-36 bg-white border border-[#BAC095]/30 rounded-2xl p-4 shadow-sm"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <div className="text-xs font-black uppercase tracking-wider text-[#3D4127]/40 px-3 pb-2 border-b border-[#F4F6F0] mb-2">
               Technology Stack
             </div>
@@ -221,7 +225,9 @@ export default function ToolsPage() {
             {filteredTools.map((tool, idx) => (
               <div 
                 key={idx} 
-                className="bg-white border border-[#BAC095]/30 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-[#636B2F]/40 transition-all flex flex-col justify-between group animate-fadeIn"
+                className="bg-white border border-[#BAC095]/30 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-[#636B2F]/40 transition-all flex flex-col justify-between group"
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
               >
                 <div className="space-y-4">
                   <div className="flex justify-between items-start gap-2">
@@ -257,21 +263,21 @@ export default function ToolsPage() {
 
         {/* ================= DETAILED ARCHITECTURAL OUTCOME CALLOUTS ================= */}
         <div className="max-w-7xl mx-auto mt-28 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-[#BAC095]/30 pt-16">
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-up" data-aos-delay="100">
             <div className="text-2xl">⚡</div>
             <h4 className="text-base font-black text-[#3D4127]">Performance First Execution</h4>
             <p className="text-xs md:text-sm text-[#3D4127]/70 font-medium leading-relaxed">
               We completely eliminate legacy technical layout friction by ensuring every dependency we run consistently scores in the green on public performance matrices.
             </p>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-up" data-aos-delay="200">
             <div className="text-2xl">🔒</div>
             <h4 className="text-base font-black text-[#3D4127]">Deep Structural Protection</h4>
             <p className="text-xs md:text-sm text-[#3D4127]/70 font-medium leading-relaxed">
               Security parameters are never treated as an afterthought. Cryptographic systems and data validation tokens protect every critical routing endpoint automatically.
             </p>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-up" data-aos-delay="300">
             <div className="text-2xl">📈</div>
             <h4 className="text-base font-black text-[#3D4127]">Modular Scaling Parameters</h4>
             <p className="text-xs md:text-sm text-[#3D4127]/70 font-medium leading-relaxed">
@@ -281,15 +287,18 @@ export default function ToolsPage() {
         </div>
 
         {/* ================= BOTTOM CONVERSION BANNER ================= */}
-        <div className="mt-28 text-center max-w-4xl mx-auto bg-[#636B2F] text-white p-8 md:p-12 rounded-3xl shadow-xl relative overflow-hidden">
+        <div 
+          className="mt-28 text-center max-w-4xl mx-auto bg-[#636B2F] text-white p-8 md:p-12 rounded-[2.5rem] shadow-xl relative overflow-hidden"
+          data-aos="zoom-in"
+        >
           <div className="absolute inset-0 bg-[radial-gradient(#BAC095_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
           <div className="max-w-2xl mx-auto space-y-4 relative z-10">
-            <h3 className="text-2xl md:text-3xl font-black tracking-tight">Require a specialized technology migration?</h3>
-            <p className="text-xs md:text-sm text-white/80 font-medium leading-relaxed">
+            <h3 className="text-2xl md:text-3xl font-black tracking-tight leading-tight">Require a specialized technology migration?</h3>
+            <p className="text-xs md:text-sm text-white/80 font-medium leading-relaxed opacity-90">
               Our remote team safely handles custom legacy application overhauls, database cleanups, and transition pipelines onto modern serverless frameworks like Next.js seamlessly.
             </p>
             <div className="pt-4">
-              <Link href="/contact" className="inline-block bg-[#F4F6F0] text-[#3D4127] hover:bg-white text-xs font-black px-6 py-3.5 rounded-xl transition-all shadow-md tracking-wide cursor-pointer">
+              <Link href="/contact" className="inline-block bg-[#F4F6F0] text-[#3D4127] hover:bg-white text-xs font-black px-6 py-3.5 rounded-xl transition-all shadow-md tracking-wide cursor-pointer w-full sm:w-auto">
                 Request Technology Stack Consultation
               </Link>
             </div>
@@ -320,31 +329,11 @@ export default function ToolsPage() {
           <div className="md:col-span-3 space-y-3 text-xs">
             <h4 className="font-black text-white uppercase tracking-wider text-[11px]">Core Services</h4>
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link href="/services/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/headless-commerce" className="hover:text-white transition-colors">
-                  E-Commerce & Headless Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mvp-development" className="hover:text-white transition-colors">
-                  MVP Development for Startups
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">
-                  Premium UI/UX & Redesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">
-                  Maintenance & Optimization
-                </Link>
-              </li>
+              <li><Link href="/services/custom-web-development" className="hover:text-white transition-colors">Custom Web App Development</Link></li>
+              <li><Link href="/services/headless-commerce" className="hover:text-white transition-colors">E-Commerce & Headless Commerce</Link></li>
+              <li><Link href="/services/mvp-development" className="hover:text-white transition-colors">MVP Development for Startups</Link></li>
+              <li><Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">Premium UI/UX & Redesign</Link></li>
+              <li><Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">Maintenance & Optimization</Link></li>
             </ul>
           </div>
 

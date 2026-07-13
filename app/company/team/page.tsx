@@ -17,6 +17,7 @@ export default function TeamPage() {
     {
       name: "Aihtesham Chaudhary",
       role: "Chief Technology Officer (CTO)",
+      roleShort: "CTO",
       bio: "Aihtesham manages our remote engineering ecosystem, backend system runtimes, and database optimization frameworks. He specializes in designing complex microservice patterns, custom GraphQL API layouts, and maintaining type-safe deployment standards across all product stacks.",
       linkedin: "https://www.linkedin.com/in/aihtesham-chaudhary-a52143343",
       portfolioUrl: "https://portfolio-pearl-eight-94.vercel.app/", 
@@ -26,6 +27,7 @@ export default function TeamPage() {
     {
       name: "Madan Yadav",
       role: "Chief Operating Officer (COO)",
+      roleShort: "COO",
       bio: "Madan oversees product milestone lifecycles, cross-functional remote engineering agile workflows, and user experience compliance. He balances rigorous quality gates with WCAG digital accessibility standards to ensure flawless system delivery parameters.",
       linkedin: "https://linkedin.com/in/madan-yadav",
       portfolioUrl: "https://yourportfolio.com/madan", 
@@ -35,13 +37,13 @@ export default function TeamPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       {/* ================= MAIN CONTENT SECTION ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
         
-        {/* Header Block */}
-        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+        {/* Header Block: Smooth Entrance Animation */}
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4" data-aos="fade-up">
           <span className="text-xs font-bold tracking-widest text-white uppercase bg-[#636B2F] px-4 py-1.5 rounded-full inline-block shadow-sm">
             👥 Executive Leadership Team
           </span>
@@ -59,6 +61,8 @@ export default function TeamPage() {
             <div 
               key={idx} 
               className="bg-white border border-[#BAC095]/30 rounded-3xl p-6 md:p-10 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row items-center gap-10"
+              data-aos="fade-up"
+              data-aos-delay={idx * 150}
             >
               {/* Circular Avatar Photo Section Container */}
               <div className="relative w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-[#BAC095]/40 shadow-sm shrink-0 bg-gradient-to-br from-white to-[#BAC095]/10 flex flex-col items-center justify-center text-center p-4">
@@ -75,7 +79,7 @@ export default function TeamPage() {
                   <>
                     <span className="text-5xl select-none mb-2">👤</span>
                     <span className="text-xs font-black text-[#3D4127] tracking-tight leading-none block max-w-[150px] truncate">{leader.name}</span>
-                    <span className="text-[10px] font-bold text-[#3D4127]/50 block mt-1">{idx === 0 ? 'CEO' : idx === 1 ? 'CTO' : 'COO'}</span>
+                    <span className="text-[10px] font-bold text-[#3D4127]/50 block mt-1">{leader.roleShort}</span>
                   </>
                 )}
               </div>
@@ -84,14 +88,14 @@ export default function TeamPage() {
               <div className="flex-1 space-y-5 text-center md:text-left w-full">
                 <div className="space-y-2">
                   <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3">
-                    <h3 className="text-3xl font-black text-[#3D4127] tracking-tight">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-[#3D4127] tracking-tight">
                       {leader.name}
                     </h3>
                     <span className="text-xs font-bold text-[#636B2F] bg-[#BAC095]/20 border border-[#BAC095]/30 px-2.5 py-0.5 rounded-md inline-block max-w-fit mx-auto md:mx-0">
                       Active Board Member
                     </span>
                   </div>
-                  <div className="text-sm font-extrabold text-[#636B2F] tracking-wide">
+                  <div className="text-xs sm:text-sm font-extrabold text-[#636B2F] tracking-wide">
                     {leader.role}
                   </div>
                 </div>
@@ -142,19 +146,19 @@ export default function TeamPage() {
 
         {/* ================= CORE TEAM EXCELLENCE PHILOSOPHY ================= */}
         <div className="max-w-5xl mx-auto mt-28 border-t border-[#BAC095]/30 pt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-up" data-aos-delay="100">
             <h4 className="text-lg font-black text-[#3D4127]">Empowerment & Speed</h4>
             <p className="text-xs md:text-sm text-[#3D4127]/70 font-medium leading-relaxed">
               Our engineering architecture flows autonomously. We eliminate bureaucratic design lag to push production-ready updates rapidly straight to edge hosting layers.
             </p>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-up" data-aos-delay="200">
             <h4 className="text-lg font-black text-[#3D4127]">Complete Transparency</h4>
             <p className="text-xs md:text-sm text-[#3D4127]/70 font-medium leading-relaxed">
               From initial database indexing profiles down to custom user journey states, our clients monitor development code commits in real time via continuous logging arrays.
             </p>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-up" data-aos-delay="300">
             <h4 className="text-lg font-black text-[#3D4127]">Constant Code Growth</h4>
             <p className="text-xs md:text-sm text-[#3D4127]/70 font-medium leading-relaxed">
               We invest deeply in exploring upcoming serverless capabilities, strict API protection scripts, and performance compression algorithms to shield setups from system lag.
@@ -163,15 +167,20 @@ export default function TeamPage() {
         </div>
 
         {/* ================= BOTTOM CONVERSION BANNER ================= */}
-        <div className="mt-28 text-center max-w-4xl mx-auto bg-[#636B2F] text-white p-8 md:p-12 rounded-3xl shadow-xl relative overflow-hidden">
+        <div 
+          className="mt-28 text-center max-w-4xl mx-auto bg-[#636B2F] text-white p-8 md:p-12 rounded-[2.5rem] shadow-xl relative overflow-hidden"
+          data-aos="zoom-in"
+        >
           <div className="absolute inset-0 bg-[radial-gradient(#BAC095_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
           <div className="max-w-2xl mx-auto space-y-4 relative z-10">
-            <h3 className="text-2xl md:text-3xl font-black tracking-tight">Ready to integrate our specialists into your project roadmap?</h3>
-            <p className="text-xs md:text-sm text-white/80 font-medium leading-relaxed">
+            <h3 className="text-2xl md:text-3xl font-black tracking-tight leading-tight px-1">
+              Ready to integrate our specialists into your project roadmap?
+            </h3>
+            <p className="text-xs md:text-sm text-white/80 font-medium leading-relaxed opacity-90 px-2">
               Sync up with our operations desk to review complete wireframe strategies, secure system audits, or custom codebase blueprints tailored exactly to your timeline parameters.
             </p>
             <div className="pt-4">
-              <Link href="/contact" className="inline-block bg-[#F4F6F0] text-[#3D4127] hover:bg-white text-xs font-black px-6 py-3.5 rounded-xl transition-all shadow-md tracking-wide cursor-pointer">
+              <Link href="/contact" className="inline-block bg-[#F4F6F0] text-[#3D4127] hover:bg-white text-xs font-black px-6 py-3.5 rounded-xl transition-all shadow-md tracking-wide cursor-pointer w-full sm:w-auto">
                 Consult With Our Tech Leaders Now
               </Link>
             </div>
@@ -202,31 +211,11 @@ export default function TeamPage() {
           <div className="md:col-span-3 space-y-3 text-xs">
             <h4 className="font-black text-white uppercase tracking-wider text-[11px]">Core Services</h4>
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link href="/services/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/headless-commerce" className="hover:text-white transition-colors">
-                  E-Commerce & Headless Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mvp-development" className="hover:text-white transition-colors">
-                  MVP Development for Startups
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">
-                  Premium UI/UX & Redesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">
-                  Maintenance & Optimization
-                </Link>
-              </li>
+              <li><Link href="/services/custom-web-development" className="hover:text-white transition-colors">Custom Web App Development</Link></li>
+              <li><Link href="/services/headless-commerce" className="hover:text-white transition-colors">E-Commerce & Headless Commerce</Link></li>
+              <li><Link href="/services/mvp-development" className="hover:text-white transition-colors">MVP Development for Startups</Link></li>
+              <li><Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">Premium UI/UX & Redesign</Link></li>
+              <li><Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">Maintenance & Optimization</Link></li>
             </ul>
           </div>
 

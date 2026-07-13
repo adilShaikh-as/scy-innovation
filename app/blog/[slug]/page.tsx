@@ -113,16 +113,20 @@ export default async function DynamicPostPage({ params }: PostPageProps) {
     : "Recent Entry";
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       <main className="max-w-3xl mx-auto pt-36 pb-24 px-6">
         
         {/* Back navigation node */}
-        <Link href="/blog" className="text-xs font-black uppercase tracking-widest text-[#636B2F] hover:text-[#3D4127] transition-colors flex items-center gap-1 mb-8">
+        <Link 
+          href="/blog" 
+          className="text-xs font-black uppercase tracking-widest text-[#636B2F] hover:text-[#3D4127] transition-colors flex items-center gap-1 mb-8"
+          data-aos="fade-right"
+        >
           ← Back to Knowledge Desk
         </Link>
 
         {/* Header Block */}
-        <div className="space-y-4 mb-12">
+        <div className="space-y-4 mb-12" data-aos="fade-up" data-aos-delay="100">
           <span className="text-[10px] font-black uppercase tracking-widest text-[#636B2F] bg-[#D4DE95]/20 px-2.5 py-1 rounded-md">
             {post.category || "General Engineering"}
           </span>
@@ -135,7 +139,7 @@ export default async function DynamicPostPage({ params }: PostPageProps) {
         </div>
 
         {/* Post Text Frame */}
-        <div className="bg-white border border-[#BAC095]/30 rounded-3xl p-6 md:p-10 shadow-sm mx-auto">
+        <div className="bg-white border border-[#BAC095]/30 rounded-3xl p-6 md:p-10 shadow-sm mx-auto" data-aos="zoom-in" data-aos-delay="200">
           {post.body ? (
             <PortableText value={post.body} components={portableTextComponents} />
           ) : (

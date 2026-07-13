@@ -37,13 +37,13 @@ export default function CaseStudiesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       {/* ================= MAIN CONTENT SECTION ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-24 px-6">
 
-        {/* Header Block */}
-        <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
+        {/* Header Block: Smooth Fade-Up Entrance */}
+        <div className="text-center max-w-2xl mx-auto mb-20 space-y-4" data-aos="fade-up">
           <span className="text-xs font-bold tracking-widest text-white uppercase bg-[#636B2F] px-4 py-1.5 rounded-full inline-block shadow-sm">
             Technical Portfolio
           </span>
@@ -59,12 +59,14 @@ export default function CaseStudiesPage() {
           </p>
         </div>
 
-        {/* Portfolio Narrative List Grid */}
+        {/* Portfolio Narrative List Grid: Cascading Card Timelines */}
         <div className="space-y-12 max-w-5xl mx-auto">
           {caseStudies.map((study, idx) => (
             <div
               key={idx}
               className="bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-12 shadow-sm hover:shadow-md transition-all space-y-6"
+              data-aos="fade-up"
+              data-aos-delay={idx * 150}
             >
 
               {/* Meta Label Header */}
@@ -156,31 +158,11 @@ export default function CaseStudiesPage() {
           <div className="md:col-span-3 space-y-3 text-xs">
             <h4 className="font-black text-white uppercase tracking-wider text-[11px]">Core Services</h4>
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link href="/services/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/headless-commerce" className="hover:text-white transition-colors">
-                  E-Commerce & Headless Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mvp-development" className="hover:text-white transition-colors">
-                  MVP Development for Startups
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">
-                  Premium UI/UX & Redesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">
-                  Maintenance & Optimization
-                </Link>
-              </li>
+              <li><Link href="/services/custom-web-development" className="hover:text-white transition-colors">Custom Web App Development</Link></li>
+              <li><Link href="/services/headless-commerce" className="hover:text-white transition-colors">E-Commerce & Headless Commerce</Link></li>
+              <li><Link href="/services/mvp-development" className="hover:text-white transition-colors">MVP Development for Startups</Link></li>
+              <li><Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">Premium UI/UX & Redesign</Link></li>
+              <li><Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">Maintenance & Optimization</Link></li>
             </ul>
           </div>
 

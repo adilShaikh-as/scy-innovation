@@ -1,40 +1,39 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 
 export default function AboutUsPage() {
-  const corporateStats = [
-    { value: "99.9%", label: "System Uptime Architecture" },
-    { value: "100+", label: "Automated Sprint Validations" },
-    { value: "WCAG", label: "Accessibility Compliance Standards" },
-    { value: "OWASP", label: "Security Risk Framework Mitigations" },
+  const corporateFocus = [
+    { value: "Serverless", label: "Decoupled Next.js Edge Architecture" },
+    { value: "Rigorous", label: "Frontend & Build Deployment Validations" },
+    { value: "Semantic", label: "Accessible DOM Element Structuring" },
+    { value: "Validated", label: "Input Sanitization & Secure API Layers" },
   ];
 
   const processSteps = [
-    { num: "01", title: "Discovery & Infrastructure Audit", desc: "We map your legacy systems, identify hidden performance bottlenecks, and flag potential security vulnerabilities." },
-    { num: "02", title: "Decoupled Architecture Blueprinting", desc: "Our team designs custom, serverless, or microservices-based roadmaps engineered specifically for modular scale." },
-    { num: "03", title: "Rigorous CI/CD Execution", desc: "Continuous integration pipelines run automated sprint validations, stress-testing every layer before it reaches deployment." },
-    { num: "04", title: "24/7 Proactive Security Management", desc: "We deploy real-time monitoring arrays to mitigate risks under the OWASP framework before they touch live workloads." }
+    { num: "01", title: "Discovery & Structure Review", desc: "We map your current frontend setups, isolate slow asset requests, and point out layout responsiveness issues." },
+    { num: "02", title: "Decoupled Layout Designing", desc: "Our team drafts modular page architectures built specifically to keep individual component files clean and easy to edit." },
+    { num: "03", title: "Git-Driven Integration", desc: "Setting up automated repository build logs to catch syntax errors or broken imports before your application goes live." },
+    { num: "04", title: "Sanitized Data Handling", desc: "We implement rigorous form-input character scrubbing steps to keep malicious automated injection spam out of your database nodes." }
   ];
 
   const techStack = [
-    { domain: "Cloud & Infrastructure", tools: "AWS, Azure, Docker, Kubernetes, Serverless" },
-    { domain: "Frontend Runtimes", tools: "Next.js, React, TypeScript, TailwindCSS" },
-    { domain: "Backend & Systems", tools: "Node.js, Python, Go, GraphQL, REST APIs" },
-    { domain: "Database & Security", tools: "PostgreSQL, MongoDB, Redis, IAM, TLS/SSL" }
+    { domain: "Cloud & Pipelines", tools: "Vercel Platform, AWS Layers, Docker Containers, GitHub Actions" },
+    { domain: "Frontend Tech", tools: "Next.js Framework, React Core, TypeScript, TailwindCSS" },
+    { domain: "Backend & Systems", tools: "Node.js runtimes, Sanity CMS APIs, GraphQL Queries, REST Endpoints" },
+    { domain: "Database & Security", tools: "PostgreSQL, MongoDB Configurations, SSL Protocols, Environment Encryption" }
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       {/* ================= MAIN CONTENT SECTIONS ================= */}
-      <main className="max-w-7xl mx-auto pt-32 pb-20 px-6 overflow-x-hidden">
+      <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
         
-        {/* ================= HERO & METRICS SECTION ================= */}
+        {/* ================= HERO & FOCUS SECTION ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-28">
           {/* Left Text Block */}
-          <div className="space-y-6">
+          <div className="space-y-6" data-aos="fade-right" data-aos-delay="100">
             <span className="text-xs font-bold tracking-widest text-[#636B2F] uppercase bg-[#D4DE95]/30 px-3 py-1 rounded-full">
               Corporate Dossier
             </span>
@@ -54,17 +53,19 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          {/* Right Metrics Grid Panel */}
-          <div className="grid grid-cols-2 gap-6">
-            {corporateStats.map((stat, index) => (
+          {/* Right Focus Grid Panel */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-6">
+            {corporateFocus.map((stat, index) => (
               <div 
                 key={index} 
-                className="bg-white border border-[#BAC095]/30 p-8 rounded-2xl text-center shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white border border-[#BAC095]/30 p-6 sm:p-8 rounded-2xl text-center shadow-sm hover:shadow-md transition-shadow"
+                data-aos="fade-up"
+                data-aos-delay={200 + index * 100}
               >
-                <div className="text-3xl md:text-4xl font-black text-[#636B2F] tracking-tight mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-[#636B2F] tracking-tight mb-2">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm font-bold text-[#3D4127]/60 uppercase tracking-wider leading-snug">
+                <div className="text-[11px] sm:text-xs md:text-sm font-bold text-[#3D4127]/60 uppercase tracking-wider leading-snug">
                   {stat.label}
                 </div>
               </div>
@@ -74,11 +75,15 @@ export default function AboutUsPage() {
 
         {/* ================= THE NARRATIVE / ORIGIN SECTION ================= */}
         <div className="max-w-6xl mx-auto mb-28 grid grid-cols-1 md:grid-cols-3 gap-12 items-start border-t border-[#BAC095]/30 pt-16">
-          <div>
+          <div data-aos="fade-right">
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-[#3D4127]">Our Core Trajectory</h2>
             <p className="text-[#636B2F] text-sm font-medium mt-2">Why we established SCY Innovation.</p>
           </div>
-          <div className="md:col-span-2 space-y-6 text-[#3D4127]/80 font-medium leading-relaxed text-sm md:text-base">
+          <div 
+            className="md:col-span-2 space-y-6 text-[#3D4127]/80 font-medium leading-relaxed text-sm md:text-base"
+            data-aos="fade-left"
+            data-aos-delay="150"
+          >
             <p>
               SCY Innovation was founded to address a critical flaw in modern IT consulting: the systemic accumulation of architectural debt. Too often, young enterprises are bottlenecked by brittle, monolithic software patterns that break under sudden spikes in consumer traffic. 
             </p>
@@ -89,7 +94,7 @@ export default function AboutUsPage() {
         </div>
 
         {/* ================= ENGINEERING STANDARDS PILLARS ================= */}
-        <div className="bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-12 max-w-6xl mx-auto space-y-12 mb-28 shadow-sm">
+        <div className="bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-12 max-w-6xl mx-auto space-y-12 mb-28 shadow-sm" data-aos="zoom-in">
           <div className="text-center max-w-xl mx-auto space-y-2">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#3D4127]">Our Engineering Standards</h2>
             <p className="text-[#636B2F] text-sm font-medium">The architectural pillars behind every line of system code we deploy.</p>
@@ -97,7 +102,7 @@ export default function AboutUsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Standard Pillar 1 */}
-            <div className="space-y-3">
+            <div className="space-y-3" data-aos="fade-up" data-aos-delay="100">
               <div className="text-xl">🛡️</div>
               <h3 className="text-lg font-bold text-[#3D4127]">Bulletproof Data Integrity</h3>
               <p className="text-sm text-[#3D4127]/70 font-medium leading-relaxed">
@@ -106,7 +111,7 @@ export default function AboutUsPage() {
             </div>
 
             {/* Standard Pillar 2 */}
-            <div className="space-y-3">
+            <div className="space-y-3" data-aos="fade-up" data-aos-delay="200">
               <div className="text-xl">⚡</div>
               <h3 className="text-lg font-bold text-[#3D4127]">Hyper-Optimized Runtimes</h3>
               <p className="text-sm text-[#3D4127]/70 font-medium leading-relaxed">
@@ -115,7 +120,7 @@ export default function AboutUsPage() {
             </div>
 
             {/* Standard Pillar 3 */}
-            <div className="space-y-3">
+            <div className="space-y-3" data-aos="fade-up" data-aos-delay="300">
               <div className="text-xl">📈</div>
               <h3 className="text-lg font-bold text-[#3D4127]">Modular Structural Scaling</h3>
               <p className="text-sm text-[#3D4127]/70 font-medium leading-relaxed">
@@ -127,14 +132,19 @@ export default function AboutUsPage() {
 
         {/* ================= TECHNICAL DNA / TECH STACK PANEL ================= */}
         <div className="max-w-6xl mx-auto mb-28 space-y-8">
-          <div className="max-w-xl space-y-2">
+          <div className="max-w-xl space-y-2" data-aos="fade-up">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#3D4127]">Our Technical DNA</h2>
             <p className="text-[#636B2F] text-sm font-medium">A standardized overview of the technology ecosystems we actively manage.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {techStack.map((stack, idx) => (
-              <div key={idx} className="bg-white/60 border border-[#BAC095]/20 p-6 rounded-2xl flex flex-col justify-between space-y-3">
+              <div 
+                key={idx} 
+                className="bg-white/60 border border-[#BAC095]/20 p-6 rounded-2xl flex flex-col justify-between space-y-3 shadow-sm"
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
+              >
                 <span className="text-sm font-bold text-[#636B2F] tracking-wide uppercase">{stack.domain}</span>
                 <p className="text-base font-semibold text-[#3D4127]/90 tracking-tight">{stack.tools}</p>
               </div>
@@ -144,14 +154,19 @@ export default function AboutUsPage() {
 
         {/* ================= EXECUTION ROADMAP (PROCESS) ================= */}
         <div className="max-w-6xl mx-auto mb-28 space-y-12">
-          <div className="max-w-xl space-y-2">
+          <div className="max-w-xl space-y-2" data-aos="fade-up">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#3D4127]">The Execution Framework</h2>
             <p className="text-[#636B2F] text-sm font-medium">How we transition your digital assets from legacy layouts into modern systems.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((step, idx) => (
-              <div key={idx} className="bg-white border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 relative shadow-sm">
+              <div 
+                key={idx} 
+                className="bg-white border border-[#BAC095]/30 p-6 rounded-2xl space-y-4 relative shadow-sm"
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
+              >
                 <div className="text-4xl font-black text-[#D4DE95]/60 absolute top-4 right-4 leading-none select-none">
                   {step.num}
                 </div>
@@ -167,17 +182,20 @@ export default function AboutUsPage() {
         </div>
 
         {/* ================= FINAL CALL TO ACTION (CTA) ================= */}
-        <div className="max-w-6xl mx-auto bg-[#636B2F] rounded-3xl p-8 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden">
+        <div 
+          className="max-w-6xl mx-auto bg-[#636B2F] rounded-[2.5rem] p-8 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden"
+          data-aos="zoom-in"
+        >
           <div className="absolute inset-0 bg-[radial-gradient(#BAC095_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
           <div className="max-w-2xl mx-auto space-y-4 relative z-10">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
               Ready to Upgrade Your Architecture?
             </h2>
-            <p className="text-sm md:text-base text-white/80 font-medium max-w-xl mx-auto leading-relaxed">
+            <p className="text-[13px] sm:text-sm md:text-base text-white/80 font-medium max-w-xl mx-auto leading-relaxed opacity-90">
               Partner with SCY Innovation to eliminate technical debt, minimize performance friction, and secure your systems under industry-validated code guidelines.
             </p>
             <div className="pt-4">
-              <Link href="/contact" className="bg-[#F4F6F0] text-[#3D4127] hover:bg-white font-extrabold px-8 py-4 rounded-full transition-all text-sm shadow-lg tracking-tight inline-block">
+              <Link href="/contact" className="bg-[#F4F6F0] text-[#3D4127] hover:bg-white font-extrabold px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-all text-xs sm:text-sm shadow-lg tracking-tight inline-block w-full sm:w-auto">
                 Schedule a Technical Consultation
               </Link>
             </div>
@@ -186,7 +204,7 @@ export default function AboutUsPage() {
 
       </main>
 
-      {/* ================= RESTRUCTURED REUSABLE FOOTER COMPONENT ================= */}
+      {/* ================= FOOTER COMPONENT ================= */}
       <footer className="bg-[#3D4127] text-[#F4F6F0]/80 border-t border-[#BAC095]/20 pt-16 pb-12 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#BAC095]/10">
           
@@ -208,31 +226,11 @@ export default function AboutUsPage() {
           <div className="md:col-span-3 space-y-3 text-xs">
             <h4 className="font-black text-white uppercase tracking-wider text-[11px]">Core Services</h4>
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link href="/services/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/headless-commerce" className="hover:text-white transition-colors">
-                  E-Commerce & Headless Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mvp-development" className="hover:text-white transition-colors">
-                  MVP Development for Startups
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">
-                  Premium UI/UX & Redesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">
-                  Maintenance & Optimization
-                </Link>
-              </li>
+              <li><Link href="/services/custom-web-development" className="hover:text-white transition-colors">Custom Web App Development</Link></li>
+              <li><Link href="/services/headless-commerce" className="hover:text-white transition-colors">E-Commerce & Headless Commerce</Link></li>
+              <li><Link href="/services/mvp-development" className="hover:text-white transition-colors">MVP Development for Startups</Link></li>
+              <li><Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">Premium UI/UX & Redesign</Link></li>
+              <li><Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">Maintenance & Optimization</Link></li>
             </ul>
           </div>
 

@@ -95,13 +95,13 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       {/* ================= MAIN CONTENT AREA ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-24 px-6">
         
-        {/* Page Section Title Block */}
-        <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
+        {/* Page Section Title Block: Smooth Entrance */}
+        <div className="text-center max-w-2xl mx-auto mb-20 space-y-4" data-aos="fade-up">
           <span className="text-xs font-bold tracking-widest text-white uppercase bg-[#636B2F] px-4 py-1.5 rounded-full inline-block shadow-sm">
             💎 Development Investment
           </span>
@@ -113,7 +113,7 @@ export default function PricingPage() {
           </p>
         </div>
 
-        {/* 3-Column Pricing Grid Array */}
+        {/* 3-Column Pricing Grid Array: Cascade Card Presentation */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto mb-20">
           {websiteTiers.map((tier, idx) => (
             <div 
@@ -123,6 +123,8 @@ export default function PricingPage() {
                   ? 'border-2 border-[#636B2F] shadow-lg lg:scale-105 z-10' 
                   : 'border border-[#BAC095]/40 shadow-sm hover:shadow-md'
               }`}
+              data-aos="fade-up"
+              data-aos-delay={idx * 150}
             >
               {idx === 1 && (
                 <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#636B2F] text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
@@ -165,7 +167,7 @@ export default function PricingPage() {
               
               <Link 
                 href="/contact" 
-                className={`mt-8 block text-center font-extrabold py-4 rounded-xl transition-all text-xs tracking-wide ${
+                className={`mt-8 block text-center font-extrabold py-4 rounded-xl transition-all text-xs tracking-wide cursor-pointer ${
                   idx === 1 
                     ? 'bg-[#636B2F] text-white hover:bg-[#3D4127] shadow-md shadow-[#636B2F]/15' 
                     : 'bg-[#F4F6F0] text-[#3D4127] border border-[#BAC095]/50 hover:bg-[#636B2F] hover:text-white hover:border-[#636B2F]'
@@ -178,7 +180,7 @@ export default function PricingPage() {
         </div>
 
         {/* ================= COMPANY TRANSPARENCY SYSTEM: PROCESS & TECH EXPLANATION ================= */}
-        <div className="max-w-6xl mx-auto mb-28 bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-10 shadow-sm space-y-8">
+        <div className="max-w-6xl mx-auto mb-28 bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-10 shadow-sm space-y-8" data-aos="zoom-in">
           <div className="space-y-2 border-b border-[#F4F6F0] pb-4">
             <h2 className="text-2xl font-black text-[#3D4127] flex items-center gap-2">
               <span>🛠️</span> Engineering Process & Technology Transparency Matrix
@@ -206,7 +208,7 @@ export default function PricingPage() {
           </div>
 
           {/* Active Tab Panel Content */}
-          <div className="bg-[#F4F6F0]/40 border border-[#BAC095]/20 rounded-2xl p-6 space-y-5 animate-fadeIn">
+          <div className="bg-[#F4F6F0]/40 border border-[#BAC095]/20 rounded-2xl p-6 space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
               <div className="md:col-span-6 space-y-2">
                 <h4 className="text-xs font-black uppercase text-[#636B2F] tracking-wider">Cost Parameter Breakdown</h4>
@@ -216,7 +218,7 @@ export default function PricingPage() {
               </div>
               <div className="md:col-span-6 space-y-2">
                 <h4 className="text-xs font-black uppercase text-[#636B2F] tracking-wider">Production Stack Modules</h4>
-                <code className="block bg-[#3D4127] text-[#F4F6F0] font-mono text-[11px] p-3 rounded-xl border border-black/10 font-bold leading-normal">
+                <code className="block bg-[#3D4127] text-[#F4F6F0] font-mono text-[11px] p-3 rounded-xl border border-black/10 font-bold leading-normal whitespace-pre-wrap overflow-x-auto">
                   {technicalWorkflows[activeWorkflowTab].techStack}
                 </code>
               </div>
@@ -239,7 +241,7 @@ export default function PricingPage() {
         </div>
 
         {/* ================= TAILORED ENTERPRISE SUB-CALLOUT ================= */}
-        <div className="max-w-4xl mx-auto bg-white border border-[#BAC095]/30 rounded-3xl p-8 text-center space-y-4 shadow-sm">
+        <div className="max-w-4xl mx-auto bg-white border border-[#BAC095]/30 rounded-3xl p-8 text-center space-y-4 shadow-sm" data-aos="fade-up">
           <h3 className="text-xl font-black text-[#3D4127]">Looking for custom, high-end ecosystem architecture?</h3>
           <p className="text-xs md:text-sm text-[#3D4127]/70 font-medium max-w-2xl mx-auto leading-relaxed">
             If your project requires complex dynamic configurations, database sharding, or legacy codebase optimization, reach out to our team directly for an interactive engineering assessment session.
@@ -275,31 +277,11 @@ export default function PricingPage() {
           <div className="md:col-span-3 space-y-3 text-xs">
             <h4 className="font-black text-white uppercase tracking-wider text-[11px]">Core Services</h4>
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link href="/services/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/headless-commerce" className="hover:text-white transition-colors">
-                  E-Commerce & Headless Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mvp-development" className="hover:text-white transition-colors">
-                  MVP Development for Startups
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">
-                  Premium UI/UX & Redesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">
-                  Maintenance & Optimization
-                </Link>
-              </li>
+              <li><Link href="/services/custom-web-development" className="hover:text-white transition-colors">Custom Web App Development</Link></li>
+              <li><Link href="/services/headless-commerce" className="hover:text-white transition-colors">E-Commerce & Headless Commerce</Link></li>
+              <li><Link href="/services/mvp-development" className="hover:text-white transition-colors">MVP Development for Startups</Link></li>
+              <li><Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">Premium UI/UX & Redesign</Link></li>
+              <li><Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">Maintenance & Optimization</Link></li>
             </ul>
           </div>
 

@@ -50,7 +50,7 @@ export default function ContactPage() {
     }
   };
 
-  // Step 2 Submission (Sends the booking confirmation email to you)
+  // Step 2 Submission (Sends the booking confirmation email)
   const handleMeetingFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMeetingSubmitStatus('SENDING');
@@ -86,14 +86,14 @@ export default function ContactPage() {
   };
 
   const faqItems = [
-    { q: "Since you are an online business, how do we handle website design workshops?", a: "We run fully digital discovery sessions using modern whiteboard and video tools. This allows us to map out your website's structural blueprint, database architecture, and user journeys collaboratively in real-time, no matter where your team is located." },
+    { q: "Since you are an online setup, how do we handle website design workshops?", a: "We run fully digital discovery sessions using modern whiteboard and video tools. This allows us to map out your website's structural blueprint, database architecture, and user journeys collaboratively in real-time, no matter where your team is located." },
     { q: "How quickly can I expect a scoping proposal for my custom website development?", a: "Once you submit your project parameters through our discovery intake form, our web development team reviews the specifications and delivers a structured proposal within 2 hours." },
     { q: "What web development stacks and frameworks do you specialize in?", a: "We build highly performant digital applications focusing heavily on modern runtimes like Next.js, React, TypeScript, and robust headless architectures to guarantee fast speeds and modular scaling." },
-    { q: "Do you offer post-launch maintenance for websites?", a: "Yes. Because we operate entirely online, our remote monitors continuously track system up-time, deploy security patches under tight frameworks, and roll out optimization updates seamlessly." }
+    { q: "Do you offer post-launch maintenance for websites?", a: "Yes. Because we operate entirely online, our remote team monitors system up-time, deploys template patches, and rolls out custom UI optimization updates seamlessly." }
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white">
+    <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
       <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
         
@@ -101,7 +101,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto mb-28">
           
           {/* Left Text Block */}
-          <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-36">
+          <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-36" data-aos="fade-right" data-aos-delay="100">
             <span className="text-xs font-bold tracking-widest text-white uppercase bg-[#636B2F] px-4 py-1.5 rounded-full inline-block shadow-sm">
               💻 Project Discovery
             </span>
@@ -110,7 +110,7 @@ export default function ContactPage() {
               <span className="text-[#636B2F]">Build Together</span>
             </h1>
             <p className="text-sm md:text-base text-[#3D4127]/80 font-medium leading-relaxed">
-              Partner with our remote web engineering team to launch fast, secure, and modern custom web applications. Provide your digital scope metrics to sync with an engineering consultant immediately.
+              Partner with our remote web engineering team to launch fast, secure, and modern custom web applications. Provide your digital scope metrics to sync with a layout consultant immediately.
             </p>
             
             <div className="pt-4 border-t border-[#BAC095]/40 space-y-4">
@@ -130,7 +130,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Intake Form Box */}
-          <div className="lg:col-span-7 bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-10 shadow-md">
+          <div className="lg:col-span-7 bg-white border border-[#BAC095]/30 rounded-3xl p-8 md:p-10 shadow-md" data-aos="fade-left" data-aos-delay="150">
             <div className="mb-6">
               <h3 className="text-2xl font-extrabold text-[#3D4127] tracking-tight">Let&apos;s Talk Business</h3>
               <p className="text-xs font-semibold text-[#3D4127]/60 mt-1">Fill out the web requirements form below and our production desk will respond within 2 hours.</p>
@@ -199,7 +199,7 @@ export default function ContactPage() {
 
         {/* ================= SECTION 2: CHOOSE PREFERRED CHANNELS GRID ================= */}
         <div className="max-w-6xl mx-auto mb-28 text-center space-y-12">
-          <div className="space-y-3">
+          <div className="space-y-3" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-black text-[#3D4127]">Choose Your Preferred Communication Method</h2>
             <p className="text-sm md:text-base text-[#3D4127]/70 font-medium max-w-2xl mx-auto leading-relaxed">
               We operate completely digitally, enabling us to support your development ecosystem smoothly over your choice of communication channels.
@@ -209,7 +209,11 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             
             {/* CARD 1: Schedule a Discovery Meeting */}
-            <div className="bg-white border border-[#BAC095]/30 rounded-2xl p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+            <div 
+              className="bg-white border border-[#BAC095]/30 rounded-2xl p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <span className="absolute top-0 right-0 bg-[#636B2F] text-white text-[10px] font-black uppercase px-3 py-1 rounded-bl-xl tracking-wider">
                 Recommended
               </span>
@@ -232,7 +236,11 @@ export default function ContactPage() {
             </div>
 
             {/* CARD 2: WhatsApp Business */}
-            <div className="bg-white border border-[#BAC095]/30 rounded-2xl p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+            <div 
+              className="bg-white border border-[#BAC095]/30 rounded-2xl p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="space-y-4">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl text-white font-bold bg-[#636B2F]">
                   💬
@@ -254,7 +262,11 @@ export default function ContactPage() {
             </div>
 
             {/* CARD 3: Email Inquiry */}
-            <div className="bg-white border border-[#BAC095]/30 rounded-2xl p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+            <div 
+              className="bg-white border border-[#BAC095]/30 rounded-2xl p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div className="space-y-4">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl text-white font-bold bg-[#636B2F]">
                   ✉️
@@ -309,7 +321,7 @@ export default function ContactPage() {
                   <span className="text-4xl block animate-bounce">📅</span>
                   <h4 className="font-black text-base text-[#3D4127]">Slot Confirmed!</h4>
                   <p className="text-xs text-[#3D4127]/70 font-medium leading-relaxed">
-                    A confirmation email record has been fired to <span className="font-bold">adilshaikh345as@gmail.com</span>. Check your inbox for the calendar routing node sync.
+                    A confirmation record has been fired to <span className="font-bold">adilshaikh345as@gmail.com</span>. Check your inbox for the calendar routing node sync.
                   </p>
                 </div>
               )}
@@ -449,7 +461,7 @@ export default function ContactPage() {
         )}
 
         {/* ================= SECTION 3: DIGITAL AVAILABILITY & SUPPORT PROFILE ================= */}
-        <div className="max-w-4xl mx-auto mb-28 bg-white border border-[#BAC095]/30 rounded-3xl p-8 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="max-w-4xl mx-auto mb-28 bg-white border border-[#BAC095]/30 rounded-3xl p-8 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8 items-center" data-aos="zoom-in">
           <div className="space-y-4">
             <h3 className="text-xl font-bold flex items-center gap-2">
               <span className="text-[#636B2F]">🕒</span> Operational Response Matrix
@@ -498,7 +510,7 @@ export default function ContactPage() {
 
         {/* ================= SECTION 4: FREQUENTLY ASKED QUESTIONS ================= */}
         <div className="max-w-4xl mx-auto mb-28 space-y-8">
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-2" data-aos="fade-up">
             <span className="text-xs font-bold tracking-widest text-[#636B2F] uppercase bg-[#D4DE95]/40 px-4 py-1.5 rounded-full inline-block">
               ❓ FAQ
             </span>
@@ -508,7 +520,12 @@ export default function ContactPage() {
 
           <div className="space-y-4">
             {faqItems.map((item, index) => (
-              <div key={index} className="bg-white border border-[#BAC095]/30 rounded-2xl shadow-sm overflow-hidden transition-all">
+              <div 
+                key={index} 
+                className="bg-white border border-[#BAC095]/30 rounded-2xl shadow-sm overflow-hidden transition-all"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <button onClick={() => toggleFaq(index)} className="w-full text-left p-5 font-bold text-sm md:text-base text-[#3D4127] flex justify-between items-center bg-white hover:bg-[#F4F6F0]/20 focus:outline-none transition-colors">
                   <span className="flex items-center gap-3">
                     <span className="text-[#636B2F]">ℹ️</span> {item.q}
@@ -529,7 +546,10 @@ export default function ContactPage() {
         </div>
 
         {/* ================= SECTION 5: STILL HAVE QUESTIONS BANNER ================= */}
-        <div className="max-w-5xl mx-auto bg-[#636B2F] rounded-3xl p-8 md:p-12 text-center text-white space-y-5 shadow-lg relative overflow-hidden">
+        <div 
+          className="max-w-5xl mx-auto bg-[#636B2F] rounded-[2.5rem] p-8 md:p-12 text-center text-white space-y-5 shadow-lg relative overflow-hidden"
+          data-aos="zoom-in"
+        >
           <div className="absolute inset-0 bg-[radial-gradient(#BAC095_1px,transparent_1px)] [background-size:20px_20px] opacity-10 pointer-events-none"></div>
           <div className="max-w-2xl mx-auto space-y-3 relative z-10">
             <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">Still Have Questions?</h3>
@@ -537,10 +557,10 @@ export default function ContactPage() {
               Can&apos;t find the specific answers you are looking for? Our web architects are here to advise you.
             </p>
             <div className="pt-2 flex flex-wrap justify-center gap-4">
-              <button onClick={() => window.location.href='mailto:adilshaikh345as@gmail.com?subject=SupportDesk'} className="bg-[#F4F6F0] text-[#3D4127] font-extrabold px-6 py-2.5 rounded-xl text-xs shadow-md transition-all hover:bg-white cursor-pointer">
+              <button onClick={() => window.location.href='mailto:adilshaikh345as@gmail.com?subject=SupportDesk'} className="bg-[#F4F6F0] text-[#3D4127] font-extrabold px-6 py-2.5 rounded-xl text-xs shadow-md transition-all hover:bg-white cursor-pointer w-full sm:w-auto">
                 Contact Web Support
               </button>
-              <button onClick={() => { setIsMeetingModalOpen(true); setModalStep(1); }} className="bg-white/10 border border-white/20 text-white font-extrabold px-6 py-2.5 rounded-xl text-xs shadow-md transition-all hover:bg-white/20 cursor-pointer">
+              <button onClick={() => { setIsMeetingModalOpen(true); setModalStep(1); }} className="bg-white/10 border border-white/20 text-white font-extrabold px-6 py-2.5 rounded-xl text-xs shadow-md transition-all hover:bg-white/20 cursor-pointer w-full sm:w-auto">
                 Schedule Architecture Meet
               </button>
             </div>
@@ -571,31 +591,11 @@ export default function ContactPage() {
           <div className="md:col-span-3 space-y-3 text-xs">
             <h4 className="font-black text-white uppercase tracking-wider text-[11px]">Core Services</h4>
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link href="/services/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/headless-commerce" className="hover:text-white transition-colors">
-                  E-Commerce & Headless Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mvp-development" className="hover:text-white transition-colors">
-                  MVP Development for Startups
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">
-                  Premium UI/UX & Redesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">
-                  Maintenance & Optimization
-                </Link>
-              </li>
+              <li><Link href="/services/custom-web-development" className="hover:text-white transition-colors">Custom Web App Development</Link></li>
+              <li><Link href="/services/headless-commerce" className="hover:text-white transition-colors">E-Commerce & Headless Commerce</Link></li>
+              <li><Link href="/services/mvp-development" className="hover:text-white transition-colors">MVP Development for Startups</Link></li>
+              <li><Link href="/services/ui-ux-redesign" className="hover:text-white transition-colors">Premium UI/UX & Redesign</Link></li>
+              <li><Link href="/services/maintenance-optimization" className="hover:text-white transition-colors">Maintenance & Optimization</Link></li>
             </ul>
           </div>
 
@@ -631,7 +631,6 @@ export default function ContactPage() {
 
         {/* Bottom Rights Matrix */}
         <div className="max-w-6xl mx-auto pt-8 flex flex-wrap justify-between items-center text-xs font-semibold text-[#F4F6F0]/40 gap-4">
-          {/* Fixed: Removed "Pvt. Ltd." to accurately reflect student startup status */}
           <div>&copy; 2026 SCY Innovation — All Rights Reserved.</div>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

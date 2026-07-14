@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import AosProvider from '@/components/AosProvider';
+import { GoogleAnalytics } from '@next/third-parties/google'; // 1. Import the official tracker
 import './globals.css';
 
 // Global SEO Metadata Engine
@@ -74,7 +75,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="antialiased bg-[#F4F6F0]">
-        {/* Injecting Structured Data Directly into Header Logic */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
@@ -83,6 +83,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           {children}
         </AosProvider>
+        
+        {/* 2. Google Analytics Tracking Token Injection */}
+        {/* Replace "G-XYZ" with your actual Measurement ID from Google Analytics Console */}
+        <GoogleAnalytics gaId="G-XYZ" />
       </body>
     </html>
   );

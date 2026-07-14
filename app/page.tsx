@@ -60,6 +60,34 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
+      {/* ================= COMPLETE ADVANCED SEO METATAG SYSTEM ================= */}
+      <title>SCY Innovation | Global Website Development & Custom Applications</title>
+      <meta name="description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
+      <meta name="keywords" content="Website Development, Custom Web Applications, Next.js Developer, Frontend Engineering, System Architecture, Headless Commerce, MVP Development" />
+      <link rel="canonical" href="https://scyinnovation.com" />
+      
+      {/* Open Graph (Facebook, LinkedIn, WhatsApp) */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://scyinnovation.com" />
+      <meta property="og:title" content="SCY Innovation | Global Website Development & Custom Applications" />
+      <meta property="og:description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
+      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="SCY Innovation Systems Operations Dashboard Architecture" />
+      <meta property="og:site_name" content="SCY Innovation" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter Cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://scyinnovation.com" />
+      <meta name="twitter:title" content="SCY Innovation | Global Website Development & Custom Applications" />
+      <meta name="twitter:description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      
+      {/* Robots control specific to this route page template */}
+      <meta name="robots" content="index, follow" />
+
       {/* ================= HERO SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 pt-24 lg:pt-32 pb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
@@ -184,7 +212,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Visual Stack Panel: Updated with Responsive Flex Stacking for Smartphone Viewports */}
+          {/* Right Visual Stack Panel */}
           <div className="bg-white border border-[#BAC095]/30 p-4 sm:p-8 rounded-3xl space-y-4 shadow-sm" data-aos="fade-left" data-aos-delay="150">
             {[
               { val: "Optimization", label: "Lazy loading layout assets and compressing image framework parameters automatically.", badge: "🟢" },
@@ -236,7 +264,7 @@ export default function Home() {
                   <p className="text-xs text-[#3D4127]/70 font-medium leading-relaxed">{item.desc}</p>
                 </div>
                 <div className="w-full bg-white h-1.5 rounded-full overflow-hidden mt-4 shadow-inner">
-                  <div className="bg-[#636B2F] h-full" style={{ width: `${(i+1)*20}%` }}></div>
+                  <div className="bg-[#636B2F] h-full" style={{ width: `${(i + 1) * 20}%` }}></div>
                 </div>
               </div>
             ))}
@@ -323,7 +351,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= FINAL CTA CONVERSION BANNER: Updated completely to match reference layout image_f75e1b.jpg ================= */}
+      {/* ================= FINAL CTA CONVERSION BANNER ================= */}
       <section 
         className="max-w-5xl mx-4 sm:mx-6 lg:mx-auto my-16 bg-[#636B2F] rounded-[2.5rem] px-5 py-10 sm:p-12 md:p-16 text-center text-white space-y-6 shadow-xl relative overflow-hidden"
         data-aos="zoom-in"
@@ -392,15 +420,6 @@ export default function Home() {
                 <a href="mailto:adilshaikh345as@gmail.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
                   adilshaikh345as@gmail.com
                 </a>
-              </li>
-              <li className="flex items-center gap-1.5 mt-1">
-                <span>📞</span>
-                <a href="tel:+918169896469" className="hover:text-white hover:underline transition-all">
-                  (+91) 816-989-6469
-                </a>
-              </li>
-              <li className="flex items-center gap-1.5 mt-1">
-                <span className="text-[10px] uppercase font-black text-[#BAC095] block">💻 Remote Hub Active Worldwide</span>
               </li>
             </ul>
           </div>

@@ -83,7 +83,7 @@ export default function Home() {
       <meta name="twitter:url" content="https://scyinnovation.com" />
       <meta name="twitter:title" content="SCY Innovation | Global Website Development & Custom Applications" />
       <meta name="twitter:description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
-      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-ai-ml.png" />
       
       {/* Robots control specific to this route page template */}
       <meta name="robots" content="index, follow" />

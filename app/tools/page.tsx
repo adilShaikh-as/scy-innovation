@@ -156,6 +156,33 @@ export default function ToolsPage() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
+      {/* ================= COMPLETE SEO METATAG SYSTEM FOR TOOLS ================= */}
+      <title>Our Technology DNA & Engineering Stack | SCY Innovation</title>
+      <meta name="description" content="Explore our production infrastructure parameters. From optimized frontend architectures to serverless cloud hosting and airtight cryptographic frameworks." />
+      <meta name="keywords" content="Next.js Core, AWS Infrastructure, AES-256 Cryptography, Digital Forensics Tools, Headless CMS Architecture, Enterprise Tech Stack" />
+      <link rel="canonical" href="https://scyinnovation.com/tools" />
+      
+      {/* Open Graph Profile Framework */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://scyinnovation.com/tools" />
+      <meta property="og:title" content="Our Technology DNA & Engineering Stack | SCY Innovation" />
+      <meta property="og:description" content="Explore our production infrastructure parameters. From optimized frontend architectures to serverless cloud hosting and airtight cryptographic frameworks." />
+      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="SCY Innovation Production Technical Ecosystem Grid" />
+      <meta property="og:site_name" content="SCY Innovation" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter Cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://scyinnovation.com/tools" />
+      <meta name="twitter:title" content="Our Technology DNA & Engineering Stack | SCY Innovation" />
+      <meta name="twitter:description" content="Explore our production infrastructure parameters. From optimized frontend architectures to serverless cloud hosting and airtight cryptographic frameworks." />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      
+      <meta name="robots" content="index, follow" />
+
       {/* ================= MAIN CONTENT CONTAINER ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
         
@@ -167,7 +194,7 @@ export default function ToolsPage() {
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-[#3D4127] leading-tight">
             Our Technology DNA & Engineering Stack
           </h1>
-          <p className="text-[#636B2F] text-base md:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#636B2F] text-base md:text-lg font-medium leading-relaxed">
             We don&apos;t just paint visual interfaces. We deploy stable, highly optimized backend patterns and airtight security protocols tailored for enterprise scale.
           </p>
         </div>
@@ -319,9 +346,9 @@ export default function ToolsPage() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
+              <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
+              <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>
 
@@ -352,8 +379,8 @@ export default function ToolsPage() {
             <ul className="space-y-2 font-medium text-[#F4F6F0]/70">
               <li className="flex items-center gap-1.5">
                 <span>✉️</span>
-                <a href="mailto:adilshaikh345as@gmail.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
-                  adilshaikh345as@gmail.com
+                <a href="mailto:contact@scyinnovation.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
+                  contact@scyinnovation.com
                 </a>
               </li>
               <li className="flex items-center gap-1.5 mt-1">

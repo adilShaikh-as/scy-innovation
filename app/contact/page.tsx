@@ -95,6 +95,34 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
+      {/* ================= COMPLETE ADVANCED SEO METATAG SYSTEM FOR CONTACT ================= */}
+      <title>Project Discovery & Technical Intake Desk | SCY Innovation</title>
+      <meta name="description" content="Connect with our remote web engineering team to launch fast, secure, and modern custom web applications. Submit your web requirements or book a video slot." />
+      <meta name="keywords" content="Contact SCY Innovation, Custom Web Intake Form, Hire Next.js Developers, Web Consultancy India, Remote Engineering Solutions Desk" />
+      <link rel="canonical" href="https://scyinnovation.com/contact" />
+      
+      {/* Open Graph Profile Framework */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://scyinnovation.com/contact" />
+      <meta property="og:title" content="Project Discovery & Technical Intake Desk | SCY Innovation" />
+      <meta property="og:description" content="Connect with our remote web engineering team to launch fast, secure, and modern custom web applications. Submit your web requirements or book a video slot." />
+      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="SCY Innovation Project Discovery Portal" />
+      <meta property="og:site_name" content="SCY Innovation" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter Cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://scyinnovation.com/contact" />
+      <meta name="twitter:title" content="Project Discovery & Technical Intake Desk | SCY Innovation" />
+      <meta name="twitter:description" content="Connect with our remote web engineering team to launch fast, secure, and modern custom web applications. Submit your web requirements or book a video slot." />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      
+      <meta name="robots" content="index, follow" />
+
+      {/* ================= MAIN CONTENT MODULE ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
         
         {/* ================= SECTION 1: TOP HERO HEADER & INTAKE PANEL ================= */}
@@ -321,7 +349,7 @@ export default function ContactPage() {
                   <span className="text-4xl block animate-bounce">📅</span>
                   <h4 className="font-black text-base text-[#3D4127]">Slot Confirmed!</h4>
                   <p className="text-xs text-[#3D4127]/70 font-medium leading-relaxed">
-                    A confirmation record has been fired to <span className="font-bold">adilshaikh345as@gmail.com</span>. Check your inbox for the calendar routing node sync.
+                    A confirmation record has been fired to <span className="font-bold">contact@scyinnovation.com</span>. Check your inbox for the calendar routing node sync.
                   </p>
                 </div>
               )}
@@ -413,7 +441,7 @@ export default function ContactPage() {
                       name="Email_Address" 
                       type="email" 
                       required 
-                      placeholder="adilshaikh345as@gmail.com" 
+                      placeholder="contact@scyinnovation.com" 
                       className="w-full bg-[#F4F6F0]/50 border border-[#BAC095]/40 focus:border-[#636B2F] focus:outline-none rounded-xl px-4 py-2 text-xs font-medium text-[#3D4127]" 
                     />
                   </div>
@@ -557,7 +585,7 @@ export default function ContactPage() {
               Can&apos;t find the specific answers you are looking for? Our web architects are here to advise you.
             </p>
             <div className="pt-2 flex flex-wrap justify-center gap-4">
-              <button onClick={() => window.location.href='mailto:adilshaikh345as@gmail.com?subject=SupportDesk'} className="bg-[#F4F6F0] text-[#3D4127] font-extrabold px-6 py-2.5 rounded-xl text-xs shadow-md transition-all hover:bg-white cursor-pointer w-full sm:w-auto">
+              <button onClick={() => window.location.href='mailto:contact@scyinnovation.com?subject=SupportDesk'} className="bg-[#F4F6F0] text-[#3D4127] font-extrabold px-6 py-2.5 rounded-xl text-xs shadow-md transition-all hover:bg-white cursor-pointer w-full sm:w-auto">
                 Contact Web Support
               </button>
               <button onClick={() => { setIsMeetingModalOpen(true); setModalStep(1); }} className="bg-white/10 border border-white/20 text-white font-extrabold px-6 py-2.5 rounded-xl text-xs shadow-md transition-all hover:bg-white/20 cursor-pointer w-full sm:w-auto">

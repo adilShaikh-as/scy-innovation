@@ -39,6 +39,33 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
+      {/* ================= COMPLETE ADVANCED SEO METATAG SYSTEM FOR TEAM ================= */}
+      <title>Our Leadership Team | Executive Technology Directors</title>
+      <meta name="description" content="Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation." />
+      <meta name="keywords" content="SCY Innovation Leadership, Adil Shaikh CEO, Technical Project Management, Web Solutions Directors, Systems Architects India" />
+      <link rel="canonical" href="https://scyinnovation.com/company/team" />
+      
+      {/* Open Graph Profile Framework */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://scyinnovation.com/company/team" />
+      <meta property="og:title" content="Our Leadership Team | Executive Technology Directors" />
+      <meta property="og:description" content="Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation." />
+      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="SCY Innovation Executive Architecture Leadership Team" />
+      <meta property="og:site_name" content="SCY Innovation" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter Cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://scyinnovation.com/company/team" />
+      <meta name="twitter:title" content="Our Leadership Team | Executive Technology Directors" />
+      <meta name="twitter:description" content="Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation." />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      
+      <meta name="robots" content="index, follow" />
+      
       {/* ================= MAIN CONTENT SECTION ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
         
@@ -180,7 +207,7 @@ export default function TeamPage() {
               Sync up with our operations desk to review complete wireframe strategies, secure system audits, or custom codebase blueprints tailored exactly to your timeline parameters.
             </p>
             <div className="pt-4">
-              <Link href="/contact" className="inline-block bg-[#F4F6F0] text-[#3D4127] hover:bg-white text-xs font-black px-6 py-3.5 rounded-xl transition-all shadow-md tracking-wide cursor-pointer w-full sm:w-auto">
+              <Link href="/contact" className="inline-block bg-[#F4F6F0] text-[#3D4127] hover:bg-white text-xs font-black px-6 py-3.5 rounded-xl transition-all shadow-md tracking-wide inline-block cursor-pointer w-full sm:w-auto">
                 Consult With Our Tech Leaders Now
               </Link>
             </div>
@@ -201,9 +228,9 @@ export default function TeamPage() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
+              <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
+              <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>
 
@@ -234,8 +261,8 @@ export default function TeamPage() {
             <ul className="space-y-2 font-medium text-[#F4F6F0]/70">
               <li className="flex items-center gap-1.5">
                 <span>✉️</span>
-                <a href="mailto:adilshaikh345as@gmail.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
-                  adilshaikh345as@gmail.com
+                <a href="mailto:contact@scyinnovation.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
+                  contact@scyinnovation.com
                 </a>
               </li>
               <li className="flex items-center gap-1.5 mt-1">

@@ -27,6 +27,33 @@ export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
+      {/* ================= COMPLETE SEO METATAG SYSTEM FOR ABOUT US ================= */}
+      <title>About Us | Corporate Dossier & Architectural Standards</title>
+      <meta name="description" content="Discover our trajectory, technical infrastructure DNA, and the development workflow frameworks driving custom software delivery models across modern markets." />
+      <meta name="keywords" content="SCY Innovation Company, System Architects, Web Engineers India, Decoupled Architecture, Enterprise Software Workflow" />
+      <link rel="canonical" href="https://scyinnovation.com/company/about-us" />
+      
+      {/* Open Graph Tags */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://scyinnovation.com/company/about-us" />
+      <meta property="og:title" content="About Us | Corporate Dossier & Architectural Standards" />
+      <meta property="og:description" content="Discover our trajectory, technical infrastructure DNA, and the development workflow frameworks driving custom software delivery models across modern markets." />
+      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="SCY Innovation Systems Corporate Focus Matrix Overview" />
+      <meta property="og:site_name" content="SCY Innovation" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://scyinnovation.com/company/about-us" />
+      <meta name="twitter:title" content="About Us | Corporate Dossier & Architectural Standards" />
+      <meta name="twitter:description" content="Discover our trajectory, technical infrastructure DNA, and the development workflow frameworks driving custom software delivery models across modern markets." />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      
+      <meta name="robots" content="index, follow" />
+
       {/* ================= MAIN CONTENT SECTIONS ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
         
@@ -216,9 +243,9 @@ export default function AboutUsPage() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
+              <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
+              <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>
 
@@ -249,8 +276,8 @@ export default function AboutUsPage() {
             <ul className="space-y-2 font-medium text-[#F4F6F0]/70">
               <li className="flex items-center gap-1.5">
                 <span>✉️</span>
-                <a href="mailto:adilshaikh345as@gmail.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
-                  adilshaikh345as@gmail.com
+                <a href="mailto:contact@scyinnovation.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
+                  contact@scyinnovation.com
                 </a>
               </li>
               <li className="flex items-center gap-1.5 mt-1">

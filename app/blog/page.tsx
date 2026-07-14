@@ -60,6 +60,34 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
+      {/* ================= COMPLETE ADVANCED SEO METATAG SYSTEM FOR KNOWLEDGE DESK ================= */}
+      <title>Knowledge Desk | Technical Insights & Engineering Logs</title>
+      <meta name="description" content="Stay updated with advanced software development methodologies, serverless design patterns, and web runtimes researched inside SCY Innovation." />
+      <meta name="keywords" content="SCY Innovation Blog, Engineering Logs, Next.js Optimization Insights, Core Web Vitals Research, Web Architecture Logs" />
+      <link rel="canonical" href="https://scyinnovation.com/blog" />
+      
+      {/* Open Graph Profile Framework */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://scyinnovation.com/blog" />
+      <meta property="og:title" content="Knowledge Desk | Technical Insights & Engineering Logs" />
+      <meta property="og:description" content="Stay updated with advanced software development methodologies, serverless design patterns, and web runtimes researched inside SCY Innovation." />
+      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="SCY Innovation Knowledge Desk Hub Logo Asset" />
+      <meta property="og:site_name" content="SCY Innovation" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter Cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://scyinnovation.com/blog" />
+      <meta name="twitter:title" content="Knowledge Desk | Technical Insights & Engineering Logs" />
+      <meta name="twitter:description" content="Stay updated with advanced software development methodologies, serverless design patterns, and web runtimes researched inside SCY Innovation." />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      
+      <meta name="robots" content="index, follow" />
+
+      {/* ================= MAIN CONTENT CONTAINER ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-24 px-6">
         
         {/* Header Content Section */}
@@ -101,7 +129,6 @@ export default function BlogPage() {
                   data-aos-delay={idx * 150}
                 >
                   <div>
-                    {/* Top Section: High-Fidelity Thumbnail Header */}
                     {post.mainImage && (
                       <div className="w-full aspect-[16/10] overflow-hidden bg-[#F4F6F0] border-b border-[#BAC095]/20 relative">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -178,7 +205,7 @@ export default function BlogPage() {
         )}
       </main>
 
-      {/* ================= FOOTER COMPONENT ================= */}
+      {/* ================= SYNCHRONIZED COMPLIANT FOOTER COMPONENT ================= */}
       <footer className="bg-[#3D4127] text-[#F4F6F0]/80 border-t border-[#BAC095]/20 pt-16 pb-12 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#BAC095]/10">
           
@@ -190,9 +217,9 @@ export default function BlogPage() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
+              <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
+              <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>
 
@@ -223,8 +250,8 @@ export default function BlogPage() {
             <ul className="space-y-2 font-medium text-[#F4F6F0]/70">
               <li className="flex items-center gap-1.5">
                 <span>✉️</span>
-                <a href="mailto:adilshaikh345as@gmail.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
-                  adilshaikh345as@gmail.com
+                <a href="mailto:contact@scyinnovation.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
+                  contact@scyinnovation.com
                 </a>
               </li>
               <li className="flex items-center gap-1.5 mt-1">

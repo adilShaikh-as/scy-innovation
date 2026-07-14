@@ -41,6 +41,33 @@ export default function MVPDevelopment() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
+      {/* ================= COMPLETE ADVANCED SEO METATAG SYSTEM FOR MVP ================= */}
+      <title>MVP Development for High-Growth Startups | SCY Innovation</title>
+      <meta name="description" content="Accelerate market delivery parameters without technical debt. We engineer clean, highly cohesive codebases optimized for rapid feature pivots and rapid validation." />
+      <meta name="keywords" content="Startup MVP Development, Minimum Viable Product, Next.js MVP Build, Agile Software Sprint, Product Prototype Launch, Scalable Architecture Startup" />
+      <link rel="canonical" href="https://scyinnovation.com/services/mvp-development" />
+      
+      {/* Open Graph Profile Framework */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://scyinnovation.com/services/mvp-development" />
+      <meta property="og:title" content="MVP Development for High-Growth Startups | SCY Innovation" />
+      <meta property="og:description" content="Accelerate market delivery parameters without technical debt. We engineer clean, highly cohesive codebases optimized for rapid feature pivots and rapid validation." />
+      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="SCY Innovation Startup MVP Engineering Roadmap" />
+      <meta property="og:site_name" content="SCY Innovation" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter Cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://scyinnovation.com/services/mvp-development" />
+      <meta name="twitter:title" content="MVP Development for High-Growth Startups | SCY Innovation" />
+      <meta name="twitter:description" content="Accelerate market delivery parameters without technical debt. We engineer clean, highly cohesive codebases optimized for rapid feature pivots and rapid validation." />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      
+      <meta name="robots" content="index, follow" />
+
       {/* ================= HERO SECTION ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-24 px-6">
         <div className="max-w-4xl mx-auto space-y-6 mb-24" data-aos="fade-up">
@@ -207,9 +234,9 @@ export default function MVPDevelopment() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
+              <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
+              <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>
 
@@ -260,8 +287,8 @@ export default function MVPDevelopment() {
             <ul className="space-y-2 font-medium text-[#F4F6F0]/70">
               <li className="flex items-center gap-1.5">
                 <span>✉️</span>
-                <a href="mailto:adilshaikh345as@gmail.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
-                  adilshaikh345as@gmail.com
+                <a href="mailto:contact@scyinnovation.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
+                  contact@scyinnovation.com
                 </a>
               </li>
               <li className="flex items-center gap-1.5 mt-1">

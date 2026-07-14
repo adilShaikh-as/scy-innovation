@@ -71,7 +71,7 @@ export default function Home() {
       <meta property="og:url" content="https://scyinnovation.com" />
       <meta property="og:title" content="SCY Innovation | Global Website Development & Custom Applications" />
       <meta property="og:description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
-      <meta property="og:image" content="https://scyinnovation.com/hero-ai-ml.png" />
+      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="SCY Innovation Systems Operations Dashboard Architecture" />
@@ -83,7 +83,7 @@ export default function Home() {
       <meta name="twitter:url" content="https://scyinnovation.com" />
       <meta name="twitter:title" content="SCY Innovation | Global Website Development & Custom Applications" />
       <meta name="twitter:description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
-      <meta name="twitter:image" content="https://scyinnovation.com/hero-ai-ml.png" />
+      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
       
       {/* Robots control specific to this route page template */}
       <meta name="robots" content="index, follow" />
@@ -112,7 +112,7 @@ export default function Home() {
           
           <div className="flex flex-wrap gap-4 pt-2">
             <Link className="bg-[#636B2F] hover:bg-[#3D4127] text-white font-extrabold px-8 py-4 rounded-xl transition-all shadow-md flex items-center gap-2 cursor-pointer" href="/contact">
-              Get Started Today <span>→</span>
+              Get Started Today <span>&rarr;</span>
             </Link>
           </div>
         </div>
@@ -264,7 +264,7 @@ export default function Home() {
                   <p className="text-xs text-[#3D4127]/70 font-medium leading-relaxed">{item.desc}</p>
                 </div>
                 <div className="w-full bg-white h-1.5 rounded-full overflow-hidden mt-4 shadow-inner">
-                  <div className="bg-[#636B2F] h-full" style={{ width: `${(i + 1) * 20}%` }}></div>
+                  <div className="bg-[#636B2F] h-full" style={{ width: `${(i+1)*20}%` }}></div>
                 </div>
               </div>
             ))}
@@ -384,9 +384,9 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
+              <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
+              <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>
 
@@ -417,9 +417,18 @@ export default function Home() {
             <ul className="space-y-2 font-medium text-[#F4F6F0]/70">
               <li className="flex items-center gap-1.5">
                 <span>✉️</span>
-                <a href="mailto:adilshaikh345as@gmail.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
-                  adilshaikh345as@gmail.com
+                <a href="mailto:contact@scyinnovation.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
+                  contact@scyinnovation.com
                 </a>
+              </li>
+              <li className="flex items-center gap-1.5 mt-1">
+                <span>📞</span>
+                <a href="tel:+918169896469" className="hover:text-white hover:underline transition-all">
+                  (+91) 816-989-6469
+                </a>
+              </li>
+              <li className="flex items-center gap-1.5 mt-1">
+                <span className="text-[10px] uppercase font-black text-[#BAC095] block">💻 Remote Hub Active Worldwide</span>
               </li>
             </ul>
           </div>

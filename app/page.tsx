@@ -60,17 +60,17 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
-      {/* ================= COMPLETE ADVANCED SEO METATAG SYSTEM ================= */}
-      <title>SCY Innovation | Global Website Development & Custom Applications</title>
-      <meta name="description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
+      {/* ================= COMPLETE ADVANCED CORRECTED SEO METATAG SYSTEM ================= */}
+      <title>SCY Innovation | Web Development & Software Solutions</title>
+      <meta name="description" content="SCY Innovation is a web development and software solutions company." />
       <meta name="keywords" content="Website Development, Custom Web Applications, Next.js Developer, Frontend Engineering, System Architecture, Headless Commerce, MVP Development" />
       <link rel="canonical" href="https://scyinnovation.com" />
       
       {/* Open Graph (Facebook, LinkedIn, WhatsApp) */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://scyinnovation.com" />
-      <meta property="og:title" content="SCY Innovation | Global Website Development & Custom Applications" />
-      <meta property="og:description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
+      <meta property="og:title" content="SCY Innovation | Web Development & Software Solutions" />
+      <meta property="og:description" content="SCY Innovation is a web development and software solutions company." />
       <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -81,11 +81,10 @@ export default function Home() {
       {/* Twitter Cards */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content="https://scyinnovation.com" />
-      <meta name="twitter:title" content="SCY Innovation | Global Website Development & Custom Applications" />
-      <meta name="twitter:description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
+      <meta name="twitter:title" content="SCY Innovation | Web Development & Software Solutions" />
+      <meta name="twitter:description" content="SCY Innovation is a web development and software solutions company." />
       <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
       
-      {/* Robots control specific to this route page template */}
       <meta name="robots" content="index, follow" />
 
       {/* ================= HERO SECTION ================= */}

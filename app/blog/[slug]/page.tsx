@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import imageUrlBuilder from '@sanity/image-url';
@@ -38,6 +39,34 @@ async function getSinglePost(slug: string) {
     console.error("Failed to fetch post details:", error);
     return null;
   }
+}
+
+// ================= DYNAMIC SEO METADATA GENERATOR =================
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getSinglePost(slug);
+
+  if (!post) {
+    return {
+      title: 'Log Entry Not Found',
+    };
+  }
+
+  return {
+    title: post.title,
+    description: `Read the latest technical entry log regarding ${post.title} inside our ${post.category || 'General Engineering'} architecture framework.`,
+    openGraph: {
+      title: post.title,
+      description: `Technical documentation log regarding ${post.title}.`,
+      url: `https://scyinnovation.com/blog/${slug}`,
+      type: 'article',
+      publishedTime: post.publishedAt,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+    }
+  };
 }
 
 // Custom Tailwind styling components for Portable Text blocks
@@ -122,7 +151,7 @@ export default async function DynamicPostPage({ params }: PostPageProps) {
           className="text-xs font-black uppercase tracking-widest text-[#636B2F] hover:text-[#3D4127] transition-colors flex items-center gap-1 mb-8"
           data-aos="fade-right"
         >
-          ← Back to Knowledge Desk
+          &larr; Back to Knowledge Desk
         </Link>
 
         {/* Header Block */}

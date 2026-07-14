@@ -119,7 +119,7 @@ export default function ContactPage() {
                 <span className="text-2xl">✉️</span>
                 <div>
                   <div className="text-xs font-bold text-[#3D4127]/50 uppercase">Project Desk Email</div>
-                  <a href="mailto:adilshaikh345as@gmail.com?subject=Project Discovery Inquiry" className="text-sm font-bold text-[#3D4127] hover:text-[#636B2F] underline decoration-dotted">adilshaikh345as@gmail.com</a>
+                  <a href="mailto:contact@scyinnovation.com?subject=Project Discovery Inquiry" className="text-sm font-bold text-[#3D4127] hover:text-[#636B2F] underline decoration-dotted">contact@scyinnovation.com</a>
                 </div>
               </div>
               <div className="bg-[#BAC095]/20 border border-[#636B2F]/20 rounded-xl p-4 flex items-center gap-3">
@@ -277,7 +277,7 @@ export default function ContactPage() {
               </div>
               <div className="pt-6">
                 <a 
-                  href="mailto:adilshaikh345as@gmail.com?subject=Custom%20Website%20Development%20Inquiry"
+                  href="mailto:contact@scyinnovation.com?subject=Custom%20Website%20Development%20Inquiry"
                   className="block w-full text-center font-bold text-xs py-2.5 rounded-lg text-white bg-[#636B2F] hover:bg-[#3D4127] transition-all"
                 >
                   Send Project Email
@@ -487,9 +487,9 @@ export default function ContactPage() {
             <div className="flex flex-wrap gap-2">
               {[
                 { label: '💼 LinkedIn', url: 'https://linkedin.com' },
-                { label: '𝕏 Twitter', url: 'https://twitter.com' },
+                { label: '𝕏 Twitter', url: 'https://x.com/scyinnovation' },
                 { label: '👥 Facebook', url: 'https://facebook.com' },
-                { label: '📸 Instagram', url: 'https://instagram.com' }
+                { label: '📸 Instagram', url: 'https://www.instagram.com/scyinnovationofficial' }
               ].map((soc, idx) => (
                 <a 
                   key={idx} 
@@ -581,9 +581,9 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
+              <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
+              <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>
 
@@ -614,8 +614,8 @@ export default function ContactPage() {
             <ul className="space-y-2 font-medium text-[#F4F6F0]/70">
               <li className="flex items-center gap-1.5">
                 <span>✉️</span>
-                <a href="mailto:adilshaikh345as@gmail.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
-                  adilshaikh345as@gmail.com
+                <a href="mailto:contact@scyinnovation.com?subject=Inquiry" className="hover:text-white hover:underline transition-all">
+                  contact@scyinnovation.com
                 </a>
               </li>
               <li className="flex items-center gap-1.5 mt-1">

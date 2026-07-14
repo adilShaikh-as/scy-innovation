@@ -71,7 +71,7 @@ export default function Home() {
       <meta property="og:url" content="https://scyinnovation.com" />
       <meta property="og:title" content="SCY Innovation | Global Website Development & Custom Applications" />
       <meta property="og:description" content="Premium custom web application development, serverless decoupled layouts, and hyper-optimized runtimes built for modern enterprise scale." />
-      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image" content="https://scyinnovation.com/hero-ai-ml.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="SCY Innovation Systems Operations Dashboard Architecture" />

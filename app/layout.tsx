@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'We engineer high-performance, decoupled software systems and airtight security frameworks tailored for enterprise scaling.',
     url: 'https://scyinnovation.com',
     siteName: 'SCY Innovation',
-    images: [{ url: '/hero-cloud.png', width: 1200, height: 630, alt: 'SCY Innovation Architecture Preview' }],
+    images: [{ url: '/scy-homePage.png', width: 1200, height: 630, alt: 'SCY Innovation Architecture Preview' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SCY Innovation',
     description: 'Engineering resilient, serverless web applications with sub-second delivery.',
-    images: ['/hero-cloud.png'],
+    images: ['/scy-homePage.png'],
   },
   robots: {
     index: true,
@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           "@type": "ContactPoint",
           "telephone": "+918169896469",
           "contactType": "customer support",
-          "email": "adilshaikh345as@gmail.com",
+          "email": "contact@scyinnovation.com",
           "availableLanguage": ["en"]
         }
       },

@@ -50,7 +50,7 @@ export default function CaseStudiesPage() {
       <meta property="og:url" content="https://scyinnovation.com/case-studies" />
       <meta property="og:title" content="Case Studies & Solution Portfolio | SCY Innovation" />
       <meta property="og:description" content="Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling." />
-      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image" content="https://scyinnovation.com/case-study.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="SCY Innovation Technical Solutions Portfolio Archive" />
@@ -62,7 +62,7 @@ export default function CaseStudiesPage() {
       <meta name="twitter:url" content="https://scyinnovation.com/case-studies" />
       <meta name="twitter:title" content="Case Studies & Solution Portfolio | SCY Innovation" />
       <meta name="twitter:description" content="Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling." />
-      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta name="twitter:image" content="https://scyinnovation.com/case-study.png" />
       
       <meta name="robots" content="index, follow" />
 

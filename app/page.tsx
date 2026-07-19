@@ -71,7 +71,7 @@ export default function Home() {
       <meta property="og:url" content="https://scyinnovation.com" />
       <meta property="og:title" content="SCY Innovation | Web Development & Software Solutions" />
       <meta property="og:description" content="SCY Innovation is a web development and software solutions company." />
-      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta property="og:image" content="https://scyinnovation.com/scy-homePage.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="SCY Innovation Systems Operations Dashboard Architecture" />
@@ -83,7 +83,7 @@ export default function Home() {
       <meta name="twitter:url" content="https://scyinnovation.com" />
       <meta name="twitter:title" content="SCY Innovation | Web Development & Software Solutions" />
       <meta name="twitter:description" content="SCY Innovation is a web development and software solutions company." />
-      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
+      <meta name="twitter:image" content="https://scyinnovation.com/scy-homePage.png" />
       
       <meta name="robots" content="index, follow" />
 

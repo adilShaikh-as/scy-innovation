@@ -1,6 +1,27 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Case Studies & Solution Portfolio | SCY Innovation',
+  description: 'Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling.',
+  keywords: ['SCY Innovation Portfolio', 'Next.js Case Studies', 'Custom Dashboards', 'Full-Stack Web Applications', 'Software Engineering Metrics'],
+  openGraph: {
+    type: 'website',
+    url: 'https://scyinnovation.com/case-studies',
+    title: 'Case Studies & Solution Portfolio | SCY Innovation',
+    description: 'Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling.',
+    images: [{ url: 'https://scyinnovation.com/case-study.png', width: 1200, height: 630, alt: 'SCY Innovation Technical Solutions Portfolio Archive' }],
+    siteName: 'SCY Innovation',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Case Studies & Solution Portfolio | SCY Innovation',
+    description: 'Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling.',
+    images: ['https://scyinnovation.com/case-study.png'],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function CaseStudiesPage() {
   const caseStudies = [
@@ -39,33 +60,6 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
       
-      {/* ================= COMPLETE ADVANCED SEO METATAG SYSTEM FOR CASE STUDIES ================= */}
-      <title>Case Studies & Solution Portfolio | SCY Innovation</title>
-      <meta name="description" content="Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling." />
-      <meta name="keywords" content="SCY Innovation Portfolio, Next.js Case Studies, Custom Dashboards, Full-Stack Web Applications, Software Engineering Metrics" />
-      <link rel="canonical" href="https://scyinnovation.com/case-studies" />
-      
-      {/* Open Graph Profile Framework */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://scyinnovation.com/case-studies" />
-      <meta property="og:title" content="Case Studies & Solution Portfolio | SCY Innovation" />
-      <meta property="og:description" content="Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling." />
-      <meta property="og:image" content="https://scyinnovation.com/case-study.png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="SCY Innovation Technical Solutions Portfolio Archive" />
-      <meta property="og:site_name" content="SCY Innovation" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Cards */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content="https://scyinnovation.com/case-studies" />
-      <meta name="twitter:title" content="Case Studies & Solution Portfolio | SCY Innovation" />
-      <meta name="twitter:description" content="Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling." />
-      <meta name="twitter:image" content="https://scyinnovation.com/case-study.png" />
-      
-      <meta name="robots" content="index, follow" />
-
       {/* ================= MAIN CONTENT SECTION ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-24 px-6">
 
@@ -174,9 +168,9 @@ export default function CaseStudiesPage() {
               Premium website development and system architecture services. Delivering end-to-end engineered software solutions for forward-thinking industries.
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
+              <a href="https://www.linkedin.com/company/scy-innovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
               <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
+              <a href="https://www.facebook.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
               <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>

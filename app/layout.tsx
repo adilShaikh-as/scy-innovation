@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
-import AosProvider from '@/components/AosProvider';
-import { GoogleAnalytics } from '@next/third-parties/google'; // 1. Import the official tracker
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 // Global SEO Metadata Engine
@@ -35,9 +34,7 @@ export const metadata: Metadata = {
   }
 };
 
-// Pure Server Structural Layout
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // JSON-LD Schema Matrix Token
   const jsonLdData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -47,10 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "name": "SCY Innovation",
         "url": "https://scyinnovation.com",
         "logo": "https://scyinnovation.com/logo-icon.png",
-        "sameAs": [
-          "https://linkedin.com",
-          "https://twitter.com"
-        ],
+        "sameAs": ["https://linkedin.com", "https://twitter.com"],
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+918169896469",
@@ -65,9 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "url": "https://scyinnovation.com",
         "name": "SCY Innovation",
         "description": "Premium custom web application development and system architecture services.",
-        "publisher": {
-          "@id": "https://scyinnovation.com/#organization"
-        }
+        "publisher": { "@id": "https://scyinnovation.com/#organization" }
       }
     ]
   };
@@ -79,13 +71,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
         />
-        <AosProvider>
-          <Navbar />
-          {children}
-        </AosProvider>
-        
-        {/* 2. Google Analytics Tracking Token Injection */}
-        {/* Replace "G-XYZ" with your actual Measurement ID from Google Analytics Console */}
+        <Navbar />
+        {children}
         <GoogleAnalytics gaId="G-XYZ" />
       </body>
     </html>

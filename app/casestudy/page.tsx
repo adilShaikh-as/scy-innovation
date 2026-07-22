@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   keywords: ['SCY Innovation Portfolio', 'Next.js Case Studies', 'Custom Dashboards', 'Full-Stack Web Applications', 'Software Engineering Metrics'],
   openGraph: {
     type: 'website',
-    url: 'https://scyinnovation.com/case-studies',
+    url: 'https://scyinnovation.com/casestudies',
     title: 'Case Studies & Solution Portfolio | SCY Innovation',
     description: 'Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling.',
-    images: [{ url: 'https://scyinnovation.com/case-study.png', width: 1200, height: 630, alt: 'SCY Innovation Technical Solutions Portfolio Archive' }],
+    images: [{ url: 'https://scyinnovation.com/casestudy.png', width: 1200, height: 630, alt: 'SCY Innovation Technical Solutions Portfolio Archive' }],
     siteName: 'SCY Innovation',
     locale: 'en_US',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Case Studies & Solution Portfolio | SCY Innovation',
     description: 'Explore our technical demonstrations, custom management dashboards, and production web application architectures engineered for operational scaling.',
-    images: ['https://scyinnovation.com/case-study.png'],
+    images: ['https://scyinnovation.com/casestudy.png'],
   },
   robots: { index: true, follow: true },
 };

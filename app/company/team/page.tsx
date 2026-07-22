@@ -10,7 +10,7 @@ export default function TeamPage() {
       role: "Chief Executive Officer (CEO)",
       bio: "Adil directs the long-term technology trajectory, client relations, and operational growth models at SCY Innovation. Specializing in strategic corporate expansion and high-level digital transformation roadmaps, he ensures client platforms are engineered for extreme scalability and optimized for enterprise value.",
       linkedin: "https://www.linkedin.com/in/adilshaikh345/", 
-      portfolioUrl: "https://adilshaikh-as.github.io/Portfolio-Website/", 
+      portfolioUrl: "https://adilshaikh.vercel.app/", 
       photo: "/Adil-Profile-Image.png", 
       credentials: ["IT Strategy & Leadership", "Digital Transformation", "Platform Scaling & Architecture"]
     },

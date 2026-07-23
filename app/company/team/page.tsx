@@ -1,70 +1,68 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Our Leadership Team | Executive Technology Directors',
+  description: 'Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation.',
+  keywords: ['SCY Innovation Leadership', 'Adil Shaikh CEO', 'Technical Project Management', 'Web Solutions Directors', 'Systems Architects India'],
+  openGraph: {
+    type: 'website',
+    url: 'https://scyinnovation.com/company/team',
+    title: 'Our Leadership Team | Executive Technology Directors',
+    description: 'Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation.',
+    images: [{ url: 'https://scyinnovation.com/hero-cloud.png', width: 1200, height: 630, alt: 'SCY Innovation Executive Architecture Leadership Team' }],
+    siteName: 'SCY Innovation',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Leadership Team | Executive Technology Directors',
+    description: 'Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation.',
+    images: ['https://scyinnovation.com/hero-cloud.png'],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function TeamPage() {
   const teamLeaders = [
     {
       name: "Adil Shaikh",
-      role: "Chief Executive Officer (CEO)",
+      role: "Chief Executive Officer (CEO) & Co-Founder",
+      roleShort: "CEO",
       bio: "Adil directs the long-term technology trajectory, client relations, and operational growth models at SCY Innovation. Specializing in strategic corporate expansion and high-level digital transformation roadmaps, he ensures client platforms are engineered for extreme scalability and optimized for enterprise value.",
       linkedin: "https://www.linkedin.com/in/adilshaikh345/", 
       portfolioUrl: "https://adilshaikh.vercel.app/", 
       photo: "/Adil-Profile-Image.png", 
-      credentials: ["IT Strategy & Leadership", "Digital Transformation", "Platform Scaling & Architecture"]
+      credentials: ["Company Founder", "IT Strategy & Leadership", "Platform Scaling & Architecture"],
+      isFounder: true
     },
     {
       name: "Aihtesham Chaudhary",
-      role: "Chief Technology Officer (CTO)",
+      role: "Chief Technology Officer (CTO) & Co-Founder",
       roleShort: "CTO",
       bio: "Aihtesham manages our remote engineering ecosystem, backend system runtimes, and database optimization frameworks. He specializes in designing complex microservice patterns, custom GraphQL API layouts, and maintaining type-safe deployment standards across all product stacks.",
       linkedin: "https://www.linkedin.com/in/aihtesham-chaudhary-a52143343",
       portfolioUrl: "https://portfolio-pearl-eight-94.vercel.app/", 
-      photo: "", 
-      credentials: ["Full-Stack Distributed Systems", "Headless CMS Frameworks", "Database Tuning & Sharding"]
+      photo: "/aihteshamProfile.jpeg", 
+      credentials: ["Company Founder", "Full-Stack Distributed Systems", "Database Tuning & Sharding"],
+      isFounder: true
     },
     {
-      name: "Madan Yadav",
-      role: "Chief Operating Officer (COO)",
-      roleShort: "COO",
-      bio: "Madan oversees product milestone lifecycles, cross-functional remote engineering agile workflows, and user experience compliance. He balances rigorous quality gates with WCAG digital accessibility standards to ensure flawless system delivery parameters.",
-      linkedin: "https://linkedin.com/in/madan-yadav",
-      portfolioUrl: "https://yourportfolio.com/madan", 
+      name: "Adnan Shaikh",
+      role: "Head of Sales & Marketing",
+      roleShort: "Sales",
+      bio: "Adnan drives business expansion strategies, client outreach pipelines, and market positioning for SCY Innovation. He bridges the gap between technical infrastructure capabilities and corporate client acquisition requirements.",
+      linkedin: "https://www.linkedin.com",
+      portfolioUrl: "", 
       photo: "", 
-      credentials: ["Agile Lifecycle Management", "UI/UX Optimization Analysis", "WCAG & GDPR Compliance"]
+      credentials: ["Corporate Partnerships", "Growth Marketing", "Client Acquisition Strategy"],
+      isFounder: false
     }
   ];
 
   return (
     <div className="min-h-screen bg-[#F4F6F0] text-[#3D4127] font-sans antialiased selection:bg-[#636B2F] selection:text-white overflow-x-hidden">
-      
-      {/* ================= COMPLETE ADVANCED SEO METATAG SYSTEM FOR TEAM ================= */}
-      <title>Our Leadership Team | Executive Technology Directors</title>
-      <meta name="description" content="Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation." />
-      <meta name="keywords" content="SCY Innovation Leadership, Adil Shaikh CEO, Technical Project Management, Web Solutions Directors, Systems Architects India" />
-      <link rel="canonical" href="https://scyinnovation.com/company/team" />
-      
-      {/* Open Graph Profile Framework */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://scyinnovation.com/company/team" />
-      <meta property="og:title" content="Our Leadership Team | Executive Technology Directors" />
-      <meta property="og:description" content="Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation." />
-      <meta property="og:image" content="https://scyinnovation.com/hero-cloud.png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="SCY Innovation Executive Architecture Leadership Team" />
-      <meta property="og:site_name" content="SCY Innovation" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Cards */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content="https://scyinnovation.com/company/team" />
-      <meta name="twitter:title" content="Our Leadership Team | Executive Technology Directors" />
-      <meta name="twitter:description" content="Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation." />
-      <meta name="twitter:image" content="https://scyinnovation.com/hero-cloud.png" />
-      
-      <meta name="robots" content="index, follow" />
       
       {/* ================= MAIN CONTENT SECTION ================= */}
       <main className="max-w-7xl mx-auto pt-32 pb-20 px-6">
@@ -87,7 +85,11 @@ export default function TeamPage() {
           {teamLeaders.map((leader, idx) => (
             <div 
               key={idx} 
-              className="bg-white border border-[#BAC095]/30 rounded-3xl p-6 md:p-10 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row items-center gap-10"
+              className={`border rounded-3xl p-6 md:p-10 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row items-center gap-10 ${
+                leader.isFounder 
+                  ? 'bg-gradient-to-r from-white via-white to-[#BAC095]/15 border-[#636B2F]/40 shadow-sm' 
+                  : 'bg-white border-[#BAC095]/30'
+              }`}
               data-aos="fade-up"
               data-aos-delay={idx * 150}
             >
@@ -118,8 +120,12 @@ export default function TeamPage() {
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-[#3D4127] tracking-tight">
                       {leader.name}
                     </h3>
-                    <span className="text-xs font-bold text-[#636B2F] bg-[#BAC095]/20 border border-[#BAC095]/30 px-2.5 py-0.5 rounded-md inline-block max-w-fit mx-auto md:mx-0">
-                      Active Board Member
+                    <span className={`text-xs font-bold px-2.5 py-0.5 rounded-md inline-block max-w-fit mx-auto md:mx-0 ${
+                      leader.isFounder 
+                        ? 'bg-[#636B2F] text-white shadow-sm' 
+                        : 'text-[#636B2F] bg-[#BAC095]/20 border border-[#BAC095]/30'
+                    }`}>
+                      {leader.isFounder ? '★ Company Founder' : 'Sales & Marketing'}
                     </span>
                   </div>
                   <div className="text-xs sm:text-sm font-extrabold text-[#636B2F] tracking-wide">
@@ -156,17 +162,19 @@ export default function TeamPage() {
                 </div>
               </div>
 
-              {/* Action Button Segment */}
-              <div className="shrink-0 w-full md:w-auto pt-4 md:pt-0 flex items-center justify-center whitespace-nowrap">
-                <a
-                  href={leader.portfolioUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full md:w-auto text-center bg-[#F4F6F0] text-[#3D4127] border border-[#BAC095]/40 hover:bg-[#636B2F] hover:text-white hover:border-[#636B2F] text-xs font-black px-6 py-4 rounded-xl transition-all cursor-pointer shadow-sm tracking-wide"
-                >
-                  📂 Know More Detail
-                </a>
-              </div>
+              {/* Action Button Segment (Conditionally Rendered based on portfolio availability) */}
+              {leader.portfolioUrl && (
+                <div className="shrink-0 w-full md:w-auto pt-4 md:pt-0 flex items-center justify-center whitespace-nowrap">
+                  <a
+                    href={leader.portfolioUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full md:w-auto text-center bg-[#F4F6F0] text-[#3D4127] border border-[#BAC095]/40 hover:bg-[#636B2F] hover:text-white hover:border-[#636B2F] text-xs font-black px-6 py-4 rounded-xl transition-all cursor-pointer shadow-sm tracking-wide"
+                  >
+                    📂 Know More Detail
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -207,7 +215,7 @@ export default function TeamPage() {
               Sync up with our operations desk to review complete wireframe strategies, secure system audits, or custom codebase blueprints tailored exactly to your timeline parameters.
             </p>
             <div className="pt-4">
-              <Link href="/contact" className="inline-block bg-[#F4F6F0] text-[#3D4127] hover:bg-white text-xs font-black px-6 py-3.5 rounded-xl transition-all shadow-md tracking-wide inline-block cursor-pointer w-full sm:w-auto">
+              <Link href="/contact" className="inline-block bg-[#F4F6F0] text-[#3D4127] hover:bg-white text-xs font-black px-6 py-3.5 rounded-xl transition-all shadow-md tracking-wide cursor-pointer w-full sm:w-auto">
                 Consult With Our Tech Leaders Now
               </Link>
             </div>
@@ -227,9 +235,9 @@ export default function TeamPage() {
               Premium website development and system architecture services. Delivering end-to-end engineered software solutions for forward-thinking industries.
             </p>
             <div className="flex flex-wrap gap-3 pt-2 text-xs font-bold text-white/70">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
+              <a href="https://www.linkedin.com/company/scy-innovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">💼 LinkedIn</a>
               <a href="https://x.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏 Twitter</a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
+              <a href="https://www.facebook.com/scyinnovation" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">👥 Facebook</a>
               <a href="https://www.instagram.com/scyinnovationofficial" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">📸 Instagram</a>
             </div>
           </div>

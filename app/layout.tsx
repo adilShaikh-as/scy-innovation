@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   description: 'Premium custom web application development, headless commerce architectures, and long-term system optimization frameworks built for modern enterprise scale.',
   keywords: ['Custom Web Development', 'Headless Commerce', 'Next.js Architecture', 'MVP Development', 'System Optimization'],
   authors: [{ name: 'Adil Shaikh' }],
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/icon.png', sizes: '180x180' },
+    ],
+  },
   openGraph: {
     title: 'SCY Innovation | Engineering Resilient Digital Infrastructure',
     description: 'We engineer high-performance, decoupled software systems and airtight security frameworks tailored for enterprise scaling.',

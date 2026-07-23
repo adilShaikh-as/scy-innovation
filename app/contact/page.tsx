@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: 'https://scyinnovation.com/contact',
     title: 'Project Discovery & Technical Intake Desk | SCY Innovation',
     description: 'Connect with our remote web engineering team to launch fast, secure, and modern custom web applications. Submit your web requirements or book a video slot.',
-    images: [{ url: 'https://scyinnovation.com/hero-cloud.png', width: 1200, height: 630, alt: 'SCY Innovation Project Discovery Portal' }],
+    images: [{ url: 'https://scyinnovation.com/contact-us.png', width: 1200, height: 630, alt: 'SCY Innovation Project Discovery Portal' }],
     siteName: 'SCY Innovation',
     locale: 'en_US',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Project Discovery & Technical Intake Desk | SCY Innovation',
     description: 'Connect with our remote web engineering team to launch fast, secure, and modern custom web applications. Submit your web requirements or book a video slot.',
-    images: ['https://scyinnovation.com/hero-cloud.png'],
+    images: ['https://scyinnovation.com/contact-us.png'],
   },
   robots: { index: true, follow: true },
 };

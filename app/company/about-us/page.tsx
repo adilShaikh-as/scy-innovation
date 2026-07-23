@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: 'https://scyinnovation.com/company/about-us',
     title: 'About Us | Corporate Dossier & Architectural Standards',
     description: 'Discover our trajectory, technical infrastructure DNA, and the development workflow frameworks driving custom software delivery models across modern markets.',
-    images: [{ url: 'https://scyinnovation.com/hero-cloud.png', width: 1200, height: 630, alt: 'SCY Innovation Systems Corporate Focus Matrix Overview' }],
+    images: [{ url: 'https://scyinnovation.com/about-scy.png', width: 1200, height: 630, alt: 'SCY Innovation Systems Corporate Focus Matrix Overview' }],
     siteName: 'SCY Innovation',
     locale: 'en_US',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Us | Corporate Dossier & Architectural Standards',
     description: 'Discover our trajectory, technical infrastructure DNA, and the development workflow frameworks driving custom software delivery models across modern markets.',
-    images: ['https://scyinnovation.com/hero-cloud.png'],
+    images: ['https://scyinnovation.com/about-scy.png'],
   },
   robots: { index: true, follow: true },
 };

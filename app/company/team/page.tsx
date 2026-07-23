@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: 'https://scyinnovation.com/company/team',
     title: 'Our Leadership Team | Executive Technology Directors',
     description: 'Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation.',
-    images: [{ url: 'https://scyinnovation.com/hero-cloud.png', width: 1200, height: 630, alt: 'SCY Innovation Executive Architecture Leadership Team' }],
+    images: [{ url: 'https://scyinnovation.com/about-team.png', width: 1200, height: 630, alt: 'SCY Innovation Executive Architecture Leadership Team' }],
     siteName: 'SCY Innovation',
     locale: 'en_US',
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Our Leadership Team | Executive Technology Directors',
     description: 'Meet the specialized systems directors, full-stack consultants, and agile product managers shaping modern engineering frameworks at SCY Innovation.',
-    images: ['https://scyinnovation.com/hero-cloud.png'],
+    images: ['https://scyinnovation.com/about-team.png'],
   },
   robots: { index: true, follow: true },
 };
